@@ -1,2 +1,2 @@
 print("Hello world!")
-print("lzx123")
+print("lzx_test")
