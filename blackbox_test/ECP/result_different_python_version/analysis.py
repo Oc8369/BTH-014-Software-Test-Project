@@ -1,13 +1,13 @@
 import glob
 import re
 
-# 正则匹配：提取 Object, Protocol, Hash
+# Regular expression to extract Object, Protocol, and Hash
 pattern = re.compile(r'^Object: (.*), Protocol: (.*), Hash: (.*)$')
 
-# 获取所有结果文件
+# Get all result files
 filepaths = glob.glob("*_results.txt")
 
-# 尝试用更通用的编码打开所有文件（防乱码）
+# Open all files using a general encoding to avoid encoding errors
 files = [open(fp, 'r', encoding='utf-8', errors='replace') for fp in filepaths]
 
 with open("hash_differences.txt", "w", encoding="utf-8") as out:
@@ -15,22 +15,25 @@ with open("hash_differences.txt", "w", encoding="utf-8") as out:
     while True:
         lines = [f.readline() for f in files]
         if all(line == '' for line in lines):
-            break  # 所有文件读完了
+            break  # All files have been read
 
         parsed = []
         for i, line in enumerate(lines):
             line = line.strip()
             if not line:
                 continue
-            m = pattern.match(line)
-            if not m:
+            match = pattern.match(line)
+            if not match:
                 continue
-            obj, proto, hval = m.group(1), m.group(2), m.group(3)
+
+            obj = match.group(1)
+            proto = match.group(2)
+            hval = match.group(3)
             parsed.append((filepaths[i], obj, proto, hval))
 
         hashes = set(item[3] for item in parsed)
         if len(hashes) > 1:
-            # 提取 object 和 protocol（只展示一次）
+            # Extract object and protocol (only display once)
             obj, proto = parsed[0][1], parsed[0][2]
             out.write(f"--- Difference at line {line_number} ---\n")
             out.write(f"Object: {obj}, Protocol: {proto}\n")
@@ -40,8 +43,8 @@ with open("hash_differences.txt", "w", encoding="utf-8") as out:
 
         line_number += 1
 
-# 关闭所有文件
+# Close all files
 for f in files:
     f.close()
 
-print("比较完成，差异保存在 hash_differences.txt")
+print("Comparison completed, differences saved in hash_differences.txt")

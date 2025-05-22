@@ -1,0 +1,30 @@
+--- Difference at line 83 ---
+Object: /test/path, Protocol: 0
+File: darwin_py312_ecp_results.txt, Hash: c5a43a50e6812892d26aa0cf3ea9542e00267fb8c4f3b70fa8a2ab28406af6b8
+File: linux_py312_ecp_results.txt, Hash: c5a43a50e6812892d26aa0cf3ea9542e00267fb8c4f3b70fa8a2ab28406af6b8
+File: windows_py312_ecp_results.txt, Hash: 16bea353edfce574c6eee547d323b9cf46b238eb0609565057d8e37a4ad212c7
+
+--- Difference at line 88 ---
+Object: /test/path, Protocol: 1
+File: darwin_py312_ecp_results.txt, Hash: bc0efc9159d65bc65fe84931c14a1be9dea4281a75fb94cfc5b356d9ee5b118c
+File: linux_py312_ecp_results.txt, Hash: bc0efc9159d65bc65fe84931c14a1be9dea4281a75fb94cfc5b356d9ee5b118c
+File: windows_py312_ecp_results.txt, Hash: 37e72339bb2f0c729da5bbc59a89c02512dab840e728e4f8be8d73581843f4a2
+
+--- Difference at line 93 ---
+Object: /test/path, Protocol: 2
+File: darwin_py312_ecp_results.txt, Hash: 33a138b2684e4e041a77f37770c5338e7b82393b45462ab2f72835e2141599b0
+File: linux_py312_ecp_results.txt, Hash: 33a138b2684e4e041a77f37770c5338e7b82393b45462ab2f72835e2141599b0
+File: windows_py312_ecp_results.txt, Hash: bc335f27248420ff4e4b8c5f225d85d99881d28cb7c311facd822e488f691997
+
+--- Difference at line 98 ---
+Object: /test/path, Protocol: 3
+File: darwin_py312_ecp_results.txt, Hash: 6181040fa04cf89d571319a70160a22f5b61040ec63dcc30bb2f6c60cf8d52e3
+File: linux_py312_ecp_results.txt, Hash: 6181040fa04cf89d571319a70160a22f5b61040ec63dcc30bb2f6c60cf8d52e3
+File: windows_py312_ecp_results.txt, Hash: bd4e3279be52f14a1c0350efe51ec9696260ec8a04e65509a9e5d93fb8ae6088
+
+--- Difference at line 103 ---
+Object: /test/path, Protocol: 4
+File: darwin_py312_ecp_results.txt, Hash: a22bc055b0440ffad0e62cb917211f24869983d083e36daec3e1199ed1ba4d32
+File: linux_py312_ecp_results.txt, Hash: a22bc055b0440ffad0e62cb917211f24869983d083e36daec3e1199ed1ba4d32
+File: windows_py312_ecp_results.txt, Hash: 2d486420cedab7f7236daeca4ba00dbc8b4216a8de4c9040b8f939d15e8fff0f
+
