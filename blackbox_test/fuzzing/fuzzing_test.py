@@ -153,6 +153,3 @@ def test_fuzzing(num=100000):
 
         hash_value = hashlib.sha256(bytes_flow).hexdigest()
         save_test_result(data, protocol, hash_value)
-
-
-# python -m pytest fuzzing_test.py -v
