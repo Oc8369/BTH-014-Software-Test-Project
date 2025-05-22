@@ -1,0 +1,49 @@
+--- Difference at line 248 ---
+Object: 2025-05-22 18:53:34.648767, Protocol: -1
+File: windows_py310_coverage_results.txt, Hash: 253577a9c0f9a9c7f673321f1fbd4bc881953f9fa13091d405bc32e8908dd28b
+File: windows_py311_coverage_results.txt, Hash: 90cd90fd041f0afccda1bbd1e0bdaacf2916de407707d273f57de5fa4e9dc3fb
+File: windows_py312_coverage_results.txt, Hash: 704fa9b1a4913c89810c620685a1ed8480e8d3e4123ed32e2c4b97cf862c3e6d
+File: windows_py38_coverage_results.txt, Hash: 9dc49f3dc5b3c7bafb2431942b8656f4208e0a646e5a0cfc05bf2e47ff747fdb
+
+--- Difference at line 251 ---
+Object: 2025-05-22 18:53:34.652773, Protocol: 0
+File: windows_py310_coverage_results.txt, Hash: 48f42ba48cd0fb128359ab45702a3d13a49a7e8316889c6bee5e1fd6f9431de1
+File: windows_py311_coverage_results.txt, Hash: f79223e19fcbce410cf33d009c4e44af5e04d7e3f385e437fd2796693a3df863
+File: windows_py312_coverage_results.txt, Hash: f3f251aa4e0377d9b4ae067835934f29fb0937a83f84be45ca7fad21ff9220cd
+File: windows_py38_coverage_results.txt, Hash: 6d9ea74fd577184262cdafab446b266e15308591ff78ed1dc412d5a4417404a2
+
+--- Difference at line 254 ---
+Object: 2025-05-22 18:53:34.656794, Protocol: 1
+File: windows_py310_coverage_results.txt, Hash: b29a32394e8c58d6599a8eb45c9bed83ce6f75632f8e19f68a6edcdd26a6ed12
+File: windows_py311_coverage_results.txt, Hash: c7b5f054d200d9b90296b43c05b6627a1be50cae18c88081c5afee7d9d7b002b
+File: windows_py312_coverage_results.txt, Hash: 44967395c2742d813a15bda5888bdb00f6b0a1446d556b66f932e8afaab39b23
+File: windows_py38_coverage_results.txt, Hash: 845743980d90901782d9d87972ad293bff2250e4175dc45815efa92e365855e3
+
+--- Difference at line 257 ---
+Object: 2025-05-22 18:53:34.661570, Protocol: 2
+File: windows_py310_coverage_results.txt, Hash: aba2b171757634c6f2ad7272d70015ff17fe9d491a9e6d0f820e949b27b1cbd5
+File: windows_py311_coverage_results.txt, Hash: 29f5659615ed1b6c8ac458d4c518b97d16dcbd6f9d78201a94dc8f33206a7f5c
+File: windows_py312_coverage_results.txt, Hash: dbf4f64a19575f7c9ef0d72b2a59bf043d647589951916712b8383606b9955e4
+File: windows_py38_coverage_results.txt, Hash: dd6d03c417766a0eb0fc2b3aabc9592f615667661b3df0ed778318c87fa3fcd7
+
+--- Difference at line 260 ---
+Object: 2025-05-22 18:53:34.665880, Protocol: 3
+File: windows_py310_coverage_results.txt, Hash: 8dc2b371558a70a7b44b0433655a66e080c84ee2b5be89159db79a191fe3adb1
+File: windows_py311_coverage_results.txt, Hash: 28b950f1f747b624d3598ec2c6b43b8aea3f71e1df3e060933abe7f4b64ad041
+File: windows_py312_coverage_results.txt, Hash: d1e28ba3d7a4b6c3974e2f0dcedb3e629bf21b264bed33dcfd5677e7b3c6917a
+File: windows_py38_coverage_results.txt, Hash: 93c6986b784318024c04b8cd6677a8eb315d6a20ccef30c3ca187262afedf80a
+
+--- Difference at line 263 ---
+Object: 2025-05-22 18:53:34.669090, Protocol: 4
+File: windows_py310_coverage_results.txt, Hash: 2fafeadd4e4793c2a02a0134b3c11bce31184c81b47600c77189815d4213001c
+File: windows_py311_coverage_results.txt, Hash: 38c34e5e59cd657198fa31b54c137dd7cbb9a01989a01788c38752c3166f3546
+File: windows_py312_coverage_results.txt, Hash: 13df50580be0c6482528a4dd5d6cacbbc470c30b313aeed5b1016e4bee6e7acb
+File: windows_py38_coverage_results.txt, Hash: 91f1caa761a0b2d8ea93de376bf1f140d0bf3c99b75afdedcc6e531bb295127d
+
+--- Difference at line 266 ---
+Object: 2025-05-22 18:53:34.673683, Protocol: 5
+File: windows_py310_coverage_results.txt, Hash: d6c9e40db548ebb5facbab3d3004cd6d8e25b3bb841ad7f790f2f58573c76f37
+File: windows_py311_coverage_results.txt, Hash: 38cb67723f18ae4e753040aa5b61a06c42f738637b925d63f6f06b3b18a024c4
+File: windows_py312_coverage_results.txt, Hash: aa4cf7a324852de8042fe79861e718a35ed43d8285b157bed0c79fe7f13720f2
+File: windows_py38_coverage_results.txt, Hash: 9fef3a308a54bd9b04e5707e783914e4dd010ee6ba62906dbc5a1d9aa813ad86
+
