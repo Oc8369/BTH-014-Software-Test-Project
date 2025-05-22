@@ -1,0 +1,336 @@
+--- Difference at line 1 ---
+Object: 42, Protocol: -1
+File: windows_py311_ecp_results.txt, Hash: b7c8a7bf822f2bdf7aa1184fc92930c5991e8062007e075c072101275ed291ea
+File: windows_py312_ecp_results.txt, Hash: b7c8a7bf822f2bdf7aa1184fc92930c5991e8062007e075c072101275ed291ea
+File: windows_py36_ecp_results.txt, Hash: 9b64b53a0bc722e13306597718e75d90e3d8371aff57dd6e8ef7144b541cdad3
+File: windows_py37_ecp_results.txt, Hash: 81976fef9fe34f8f64469792f27360d11781b927280419c5f5514c0da0235b54
+File: windows_py38_ecp_results.txt, Hash: b7c8a7bf822f2bdf7aa1184fc92930c5991e8062007e075c072101275ed291ea
+
+--- Difference at line 2 ---
+Object: hello, Protocol: -1
+File: windows_py311_ecp_results.txt, Hash: ec98b3cc623af048a31a60eaaee6600e3f7bc57f5f7662686852c33e4e617e3d
+File: windows_py312_ecp_results.txt, Hash: ec98b3cc623af048a31a60eaaee6600e3f7bc57f5f7662686852c33e4e617e3d
+File: windows_py36_ecp_results.txt, Hash: 425c7a325bad320fe5ab4ba6cfb411d9b79168bc7a3e2f9b4428b88f876ba7f1
+File: windows_py37_ecp_results.txt, Hash: 425c7a325bad320fe5ab4ba6cfb411d9b79168bc7a3e2f9b4428b88f876ba7f1
+File: windows_py38_ecp_results.txt, Hash: ec98b3cc623af048a31a60eaaee6600e3f7bc57f5f7662686852c33e4e617e3d
+
+--- Difference at line 3 ---
+Object: 3.14, Protocol: -1
+File: windows_py311_ecp_results.txt, Hash: ca64eb7d1c0becdf95c7e02d3d393c027b7e8c2050ba06070eeabac891a67813
+File: windows_py312_ecp_results.txt, Hash: ca64eb7d1c0becdf95c7e02d3d393c027b7e8c2050ba06070eeabac891a67813
+File: windows_py36_ecp_results.txt, Hash: 7a8161062076a8001170b2d5be1fcd933570f86733e7bd69fcaceeb46e495ea5
+File: windows_py37_ecp_results.txt, Hash: 7a8161062076a8001170b2d5be1fcd933570f86733e7bd69fcaceeb46e495ea5
+File: windows_py38_ecp_results.txt, Hash: ca64eb7d1c0becdf95c7e02d3d393c027b7e8c2050ba06070eeabac891a67813
+
+--- Difference at line 4 ---
+Object: True, Protocol: -1
+File: windows_py311_ecp_results.txt, Hash: 5280fce43ea9afbd61ec2c2a16c35118af29eafa08aa2f5f714e54dc9cceb5ae
+File: windows_py312_ecp_results.txt, Hash: 5280fce43ea9afbd61ec2c2a16c35118af29eafa08aa2f5f714e54dc9cceb5ae
+File: windows_py36_ecp_results.txt, Hash: f2c4bd92e4e9bdb9a8f1377e175b4a5098e0cb9c34fb387bb089b8dcc7afd184
+File: windows_py37_ecp_results.txt, Hash: 112bda3b495d867b6a98c899fac7c25eb60ca4b6e6fe5ec7ab9299f93e8274bc
+File: windows_py38_ecp_results.txt, Hash: 5280fce43ea9afbd61ec2c2a16c35118af29eafa08aa2f5f714e54dc9cceb5ae
+
+--- Difference at line 5 ---
+Object: False, Protocol: -1
+File: windows_py311_ecp_results.txt, Hash: 132915fa0f4abd3a7939610b8d088fbbcdff866e17b5cbb2c0bdcb37782f4da2
+File: windows_py312_ecp_results.txt, Hash: 132915fa0f4abd3a7939610b8d088fbbcdff866e17b5cbb2c0bdcb37782f4da2
+File: windows_py36_ecp_results.txt, Hash: 820c3099a99b6082394f943e35b23b5c5f51f766e6cb173c3f30b29c423b6a03
+File: windows_py37_ecp_results.txt, Hash: 24a5341c9a6e30357187cbeaebee0a02714ee3b3d6cead951a613e96ffb746dc
+File: windows_py38_ecp_results.txt, Hash: 132915fa0f4abd3a7939610b8d088fbbcdff866e17b5cbb2c0bdcb37782f4da2
+
+--- Difference at line 6 ---
+Object: None, Protocol: -1
+File: windows_py311_ecp_results.txt, Hash: 6c09635decb8153d3c12e3782a69fd2eb097426f912547d351a8647b27d5580a
+File: windows_py312_ecp_results.txt, Hash: 6c09635decb8153d3c12e3782a69fd2eb097426f912547d351a8647b27d5580a
+File: windows_py36_ecp_results.txt, Hash: 6832703fd8cadedf69772ea09524d8f68e8fbe05ff8143bca25aa1187740f2d8
+File: windows_py37_ecp_results.txt, Hash: 9c298d589a2158eb513cb52191144518a2acab2cb0c04f1df14fca0f712fa4a1
+File: windows_py38_ecp_results.txt, Hash: 6c09635decb8153d3c12e3782a69fd2eb097426f912547d351a8647b27d5580a
+
+--- Difference at line 7 ---
+Object: 42, Protocol: 0
+File: windows_py311_ecp_results.txt, Hash: 420f441051addef03c2364f1a7dee7159ad9570c06e8ea563f32f8e4ad933bd3
+File: windows_py312_ecp_results.txt, Hash: 420f441051addef03c2364f1a7dee7159ad9570c06e8ea563f32f8e4ad933bd3
+File: windows_py36_ecp_results.txt, Hash: c3b48acb31aaaafeaf02904e292c87c78014a900d4cb0a5086d250d661fb3a45
+File: windows_py37_ecp_results.txt, Hash: 420f441051addef03c2364f1a7dee7159ad9570c06e8ea563f32f8e4ad933bd3
+File: windows_py38_ecp_results.txt, Hash: 420f441051addef03c2364f1a7dee7159ad9570c06e8ea563f32f8e4ad933bd3
+
+--- Difference at line 31 ---
+Object: 42, Protocol: 4
+File: windows_py311_ecp_results.txt, Hash: 81976fef9fe34f8f64469792f27360d11781b927280419c5f5514c0da0235b54
+File: windows_py312_ecp_results.txt, Hash: 81976fef9fe34f8f64469792f27360d11781b927280419c5f5514c0da0235b54
+File: windows_py36_ecp_results.txt, Hash: 9b64b53a0bc722e13306597718e75d90e3d8371aff57dd6e8ef7144b541cdad3
+File: windows_py37_ecp_results.txt, Hash: 81976fef9fe34f8f64469792f27360d11781b927280419c5f5514c0da0235b54
+File: windows_py38_ecp_results.txt, Hash: 81976fef9fe34f8f64469792f27360d11781b927280419c5f5514c0da0235b54
+
+--- Difference at line 34 ---
+Object: True, Protocol: 4
+File: windows_py311_ecp_results.txt, Hash: 112bda3b495d867b6a98c899fac7c25eb60ca4b6e6fe5ec7ab9299f93e8274bc
+File: windows_py312_ecp_results.txt, Hash: 112bda3b495d867b6a98c899fac7c25eb60ca4b6e6fe5ec7ab9299f93e8274bc
+File: windows_py36_ecp_results.txt, Hash: f2c4bd92e4e9bdb9a8f1377e175b4a5098e0cb9c34fb387bb089b8dcc7afd184
+File: windows_py37_ecp_results.txt, Hash: 112bda3b495d867b6a98c899fac7c25eb60ca4b6e6fe5ec7ab9299f93e8274bc
+File: windows_py38_ecp_results.txt, Hash: 112bda3b495d867b6a98c899fac7c25eb60ca4b6e6fe5ec7ab9299f93e8274bc
+
+--- Difference at line 35 ---
+Object: False, Protocol: 4
+File: windows_py311_ecp_results.txt, Hash: 24a5341c9a6e30357187cbeaebee0a02714ee3b3d6cead951a613e96ffb746dc
+File: windows_py312_ecp_results.txt, Hash: 24a5341c9a6e30357187cbeaebee0a02714ee3b3d6cead951a613e96ffb746dc
+File: windows_py36_ecp_results.txt, Hash: 820c3099a99b6082394f943e35b23b5c5f51f766e6cb173c3f30b29c423b6a03
+File: windows_py37_ecp_results.txt, Hash: 24a5341c9a6e30357187cbeaebee0a02714ee3b3d6cead951a613e96ffb746dc
+File: windows_py38_ecp_results.txt, Hash: 24a5341c9a6e30357187cbeaebee0a02714ee3b3d6cead951a613e96ffb746dc
+
+--- Difference at line 36 ---
+Object: None, Protocol: 4
+File: windows_py311_ecp_results.txt, Hash: 9c298d589a2158eb513cb52191144518a2acab2cb0c04f1df14fca0f712fa4a1
+File: windows_py312_ecp_results.txt, Hash: 9c298d589a2158eb513cb52191144518a2acab2cb0c04f1df14fca0f712fa4a1
+File: windows_py36_ecp_results.txt, Hash: 6832703fd8cadedf69772ea09524d8f68e8fbe05ff8143bca25aa1187740f2d8
+File: windows_py37_ecp_results.txt, Hash: 9c298d589a2158eb513cb52191144518a2acab2cb0c04f1df14fca0f712fa4a1
+File: windows_py38_ecp_results.txt, Hash: 9c298d589a2158eb513cb52191144518a2acab2cb0c04f1df14fca0f712fa4a1
+
+--- Difference at line 37 ---
+Object: [1, 2, 3], Protocol: -1
+File: windows_py311_ecp_results.txt, Hash: a684d78ed8fcb0eb553f438365b5011a166270544366b929f4e87ae25b5075b8
+File: windows_py312_ecp_results.txt, Hash: a684d78ed8fcb0eb553f438365b5011a166270544366b929f4e87ae25b5075b8
+File: windows_py36_ecp_results.txt, Hash: f9343d7d7ec5c3d8bcced056c438fc9f1d3819e9ca3d42418a40857050e10e20
+File: windows_py37_ecp_results.txt, Hash: f9343d7d7ec5c3d8bcced056c438fc9f1d3819e9ca3d42418a40857050e10e20
+File: windows_py38_ecp_results.txt, Hash: a684d78ed8fcb0eb553f438365b5011a166270544366b929f4e87ae25b5075b8
+
+--- Difference at line 38 ---
+Object: (4, 5), Protocol: -1
+File: windows_py311_ecp_results.txt, Hash: ebb0f7d3df429c5648571761a5e145ad6b28b42818695031502258f9418b253d
+File: windows_py312_ecp_results.txt, Hash: ebb0f7d3df429c5648571761a5e145ad6b28b42818695031502258f9418b253d
+File: windows_py36_ecp_results.txt, Hash: 53ddfa858ba0c6763cc109708205d281d30485fd2870377a573e003044ed753f
+File: windows_py37_ecp_results.txt, Hash: 53ddfa858ba0c6763cc109708205d281d30485fd2870377a573e003044ed753f
+File: windows_py38_ecp_results.txt, Hash: ebb0f7d3df429c5648571761a5e145ad6b28b42818695031502258f9418b253d
+
+--- Difference at line 39 ---
+Object: {'b': 2, 'a': 1}, Protocol: -1
+File: windows_py311_ecp_results.txt, Hash: e2296b65619e1a871b7bf0b9ffccbbbca58e818ccbee64794d16bbe7e4ade704
+File: windows_py312_ecp_results.txt, Hash: e2296b65619e1a871b7bf0b9ffccbbbca58e818ccbee64794d16bbe7e4ade704
+File: windows_py36_ecp_results.txt, Hash: ae8622c40986e49d221286df26c06338a0d074dbe60d86b8f52cb52cf585cf1a
+File: windows_py37_ecp_results.txt, Hash: ae8622c40986e49d221286df26c06338a0d074dbe60d86b8f52cb52cf585cf1a
+File: windows_py38_ecp_results.txt, Hash: e2296b65619e1a871b7bf0b9ffccbbbca58e818ccbee64794d16bbe7e4ade704
+
+--- Difference at line 40 ---
+Object: {1, 2, 3}, Protocol: -1
+File: windows_py311_ecp_results.txt, Hash: 0b2125cf0c8137b55447e66ea95444977817f5ff9e66864ed2b3f4e77d5ee132
+File: windows_py312_ecp_results.txt, Hash: 0b2125cf0c8137b55447e66ea95444977817f5ff9e66864ed2b3f4e77d5ee132
+File: windows_py36_ecp_results.txt, Hash: 844e80e1f1ffaba7019345c229a5b8599bdb348864e993f1cbdc2962ce8e23ce
+File: windows_py37_ecp_results.txt, Hash: 844e80e1f1ffaba7019345c229a5b8599bdb348864e993f1cbdc2962ce8e23ce
+File: windows_py38_ecp_results.txt, Hash: 0b2125cf0c8137b55447e66ea95444977817f5ff9e66864ed2b3f4e77d5ee132
+
+--- Difference at line 41 ---
+Object: frozenset({4, 5, 6}), Protocol: -1
+File: windows_py311_ecp_results.txt, Hash: 519d28635af871c6c7b77e3ae693da1c0e0800bf2a45b16182fd8cb595d3117f
+File: windows_py312_ecp_results.txt, Hash: 519d28635af871c6c7b77e3ae693da1c0e0800bf2a45b16182fd8cb595d3117f
+File: windows_py36_ecp_results.txt, Hash: cfb28e9ca7b122a6edeb791fceee98374223b7d339ba5a6cd4abdeb782d0670e
+File: windows_py37_ecp_results.txt, Hash: cfb28e9ca7b122a6edeb791fceee98374223b7d339ba5a6cd4abdeb782d0670e
+File: windows_py38_ecp_results.txt, Hash: 519d28635af871c6c7b77e3ae693da1c0e0800bf2a45b16182fd8cb595d3117f
+
+--- Difference at line 42 ---
+Object: deque([1, 2, 3]), Protocol: -1
+File: windows_py311_ecp_results.txt, Hash: 44e4b3a3bb0335cbc4f4091b52261edc18b6b67c9dd2cd9cddd5f5549391e473
+File: windows_py312_ecp_results.txt, Hash: 44e4b3a3bb0335cbc4f4091b52261edc18b6b67c9dd2cd9cddd5f5549391e473
+File: windows_py36_ecp_results.txt, Hash: 6930df757bf11910af968e16e3c4224f47174726828f3ff957948640f631748b
+File: windows_py37_ecp_results.txt, Hash: 6930df757bf11910af968e16e3c4224f47174726828f3ff957948640f631748b
+File: windows_py38_ecp_results.txt, Hash: 44e4b3a3bb0335cbc4f4091b52261edc18b6b67c9dd2cd9cddd5f5549391e473
+
+--- Difference at line 43 ---
+Object: bytearray(b'abc'), Protocol: -1
+File: windows_py311_ecp_results.txt, Hash: 7b4890a296bc9665e7244a4312051629daa51a474a608e222d2ad01d872479cd
+File: windows_py312_ecp_results.txt, Hash: 7b4890a296bc9665e7244a4312051629daa51a474a608e222d2ad01d872479cd
+File: windows_py36_ecp_results.txt, Hash: e244f43c1fd9cf89d56a4dfd0bbdb9e0bcedb0cbffc9af2514d575b4112d1e07
+File: windows_py37_ecp_results.txt, Hash: e244f43c1fd9cf89d56a4dfd0bbdb9e0bcedb0cbffc9af2514d575b4112d1e07
+File: windows_py38_ecp_results.txt, Hash: 7b4890a296bc9665e7244a4312051629daa51a474a608e222d2ad01d872479cd
+
+--- Difference at line 44 ---
+Object: [{'x': (1, 2)}, {5, 6}, bytearray(b'data')], Protocol: -1
+File: windows_py311_ecp_results.txt, Hash: d9bafb7e356a18f2d3c9d0d5daa0bde172046359f9502aa8ffab5a4b4804aa7a
+File: windows_py312_ecp_results.txt, Hash: d9bafb7e356a18f2d3c9d0d5daa0bde172046359f9502aa8ffab5a4b4804aa7a
+File: windows_py36_ecp_results.txt, Hash: 724fdc8b80dd33cbe8301072be056c9100eccb4cae209e53bf6b9ac4466cc3e1
+File: windows_py37_ecp_results.txt, Hash: 724fdc8b80dd33cbe8301072be056c9100eccb4cae209e53bf6b9ac4466cc3e1
+File: windows_py38_ecp_results.txt, Hash: d9bafb7e356a18f2d3c9d0d5daa0bde172046359f9502aa8ffab5a4b4804aa7a
+
+--- Difference at line 45 ---
+Object: [1, 2, 3], Protocol: 0
+File: windows_py311_ecp_results.txt, Hash: c81eb1d305835fe1cb192e13689011d4d2e41d4f860ad7d3b495f95ea049ad66
+File: windows_py312_ecp_results.txt, Hash: c81eb1d305835fe1cb192e13689011d4d2e41d4f860ad7d3b495f95ea049ad66
+File: windows_py36_ecp_results.txt, Hash: 55ca47490d80731bf87c6bd5a6f910f242ebbb0b1572db84cf8510be1e4a87dd
+File: windows_py37_ecp_results.txt, Hash: c81eb1d305835fe1cb192e13689011d4d2e41d4f860ad7d3b495f95ea049ad66
+File: windows_py38_ecp_results.txt, Hash: c81eb1d305835fe1cb192e13689011d4d2e41d4f860ad7d3b495f95ea049ad66
+
+--- Difference at line 46 ---
+Object: (4, 5), Protocol: 0
+File: windows_py311_ecp_results.txt, Hash: 54d8ca3c57385d845280f839b01c6ef9bdac19b69034266aef20999a9705f6d8
+File: windows_py312_ecp_results.txt, Hash: 54d8ca3c57385d845280f839b01c6ef9bdac19b69034266aef20999a9705f6d8
+File: windows_py36_ecp_results.txt, Hash: 5485c7eb2ff8c03e8bfd78b1016c25dee652806528cdad17756c60b45c06ba6a
+File: windows_py37_ecp_results.txt, Hash: 54d8ca3c57385d845280f839b01c6ef9bdac19b69034266aef20999a9705f6d8
+File: windows_py38_ecp_results.txt, Hash: 54d8ca3c57385d845280f839b01c6ef9bdac19b69034266aef20999a9705f6d8
+
+--- Difference at line 47 ---
+Object: {'b': 2, 'a': 1}, Protocol: 0
+File: windows_py311_ecp_results.txt, Hash: ae6369f5bd51de0892aab80a1d66da25d78cc5c47a238fc422bf41b840598d2d
+File: windows_py312_ecp_results.txt, Hash: ae6369f5bd51de0892aab80a1d66da25d78cc5c47a238fc422bf41b840598d2d
+File: windows_py36_ecp_results.txt, Hash: e7fab161d086a702a1588a466870201d98f49ee092973989cb74cff3ba019817
+File: windows_py37_ecp_results.txt, Hash: ae6369f5bd51de0892aab80a1d66da25d78cc5c47a238fc422bf41b840598d2d
+File: windows_py38_ecp_results.txt, Hash: ae6369f5bd51de0892aab80a1d66da25d78cc5c47a238fc422bf41b840598d2d
+
+--- Difference at line 48 ---
+Object: {1, 2, 3}, Protocol: 0
+File: windows_py311_ecp_results.txt, Hash: 3cfaf12626a004d6d841f5732336860234035759846e860532043aec456bae18
+File: windows_py312_ecp_results.txt, Hash: 3cfaf12626a004d6d841f5732336860234035759846e860532043aec456bae18
+File: windows_py36_ecp_results.txt, Hash: e13ff66801e13fc26eaa34683f2f83b6dd62820a33faa0930ae1440a202b7582
+File: windows_py37_ecp_results.txt, Hash: 3cfaf12626a004d6d841f5732336860234035759846e860532043aec456bae18
+File: windows_py38_ecp_results.txt, Hash: 3cfaf12626a004d6d841f5732336860234035759846e860532043aec456bae18
+
+--- Difference at line 49 ---
+Object: frozenset({4, 5, 6}), Protocol: 0
+File: windows_py311_ecp_results.txt, Hash: 386be2594f7f93858820958223426dfbeabf85f2b209c20cc67a6e5877415c91
+File: windows_py312_ecp_results.txt, Hash: 386be2594f7f93858820958223426dfbeabf85f2b209c20cc67a6e5877415c91
+File: windows_py36_ecp_results.txt, Hash: 0821d64fcbbf89ee54abc4aa3123d3a964f312aeb46efab34a87106831a67ede
+File: windows_py37_ecp_results.txt, Hash: 386be2594f7f93858820958223426dfbeabf85f2b209c20cc67a6e5877415c91
+File: windows_py38_ecp_results.txt, Hash: 386be2594f7f93858820958223426dfbeabf85f2b209c20cc67a6e5877415c91
+
+--- Difference at line 50 ---
+Object: deque([1, 2, 3]), Protocol: 0
+File: windows_py311_ecp_results.txt, Hash: c342b6d4e8f6cb567d21b96d59df30887d77f788ab213fb02df0d36cb3bc0d0c
+File: windows_py312_ecp_results.txt, Hash: c342b6d4e8f6cb567d21b96d59df30887d77f788ab213fb02df0d36cb3bc0d0c
+File: windows_py36_ecp_results.txt, Hash: 4dd023f6509aea0d2f3cfcba9467f84770a2cb2ad1c3590843833615a29c2282
+File: windows_py37_ecp_results.txt, Hash: c342b6d4e8f6cb567d21b96d59df30887d77f788ab213fb02df0d36cb3bc0d0c
+File: windows_py38_ecp_results.txt, Hash: c342b6d4e8f6cb567d21b96d59df30887d77f788ab213fb02df0d36cb3bc0d0c
+
+--- Difference at line 51 ---
+Object: bytearray(b'abc'), Protocol: 0
+File: windows_py311_ecp_results.txt, Hash: 8220bc41d9292387dcc0d2dd5b954b80fcbf91523bbfef20fc97ca503f30310f
+File: windows_py312_ecp_results.txt, Hash: 8220bc41d9292387dcc0d2dd5b954b80fcbf91523bbfef20fc97ca503f30310f
+File: windows_py36_ecp_results.txt, Hash: 75d94d2a872f0d724d99f68471172619e24c6049497ac7bda8cec7359a89a1b2
+File: windows_py37_ecp_results.txt, Hash: 75d94d2a872f0d724d99f68471172619e24c6049497ac7bda8cec7359a89a1b2
+File: windows_py38_ecp_results.txt, Hash: 8220bc41d9292387dcc0d2dd5b954b80fcbf91523bbfef20fc97ca503f30310f
+
+--- Difference at line 52 ---
+Object: [{'x': (1, 2)}, {5, 6}, bytearray(b'data')], Protocol: 0
+File: windows_py311_ecp_results.txt, Hash: b65cd53812e9a16eedd18ff107b0c7c129d752ef317ffcb0767996ab38e0f8c5
+File: windows_py312_ecp_results.txt, Hash: b65cd53812e9a16eedd18ff107b0c7c129d752ef317ffcb0767996ab38e0f8c5
+File: windows_py36_ecp_results.txt, Hash: e4d5c86f06aa2b6a8bdf9d95ddb494c7335522500dd8267f9a282e92a6bb6bc4
+File: windows_py37_ecp_results.txt, Hash: 35fe971d361403c6dd1bb7825fc990b1f90c8f8e5505797bfe91fe0c46c28e8d
+File: windows_py38_ecp_results.txt, Hash: b65cd53812e9a16eedd18ff107b0c7c129d752ef317ffcb0767996ab38e0f8c5
+
+--- Difference at line 59 ---
+Object: bytearray(b'abc'), Protocol: 1
+File: windows_py311_ecp_results.txt, Hash: 26963808c516219bbd255abf322159c8a700a1d5ef4c4ad003d964f2bdc0cc96
+File: windows_py312_ecp_results.txt, Hash: 26963808c516219bbd255abf322159c8a700a1d5ef4c4ad003d964f2bdc0cc96
+File: windows_py36_ecp_results.txt, Hash: 4ac308e7af27730c8550bc0154ef6c9a795e4c748dfd09ce86523df23984c59a
+File: windows_py37_ecp_results.txt, Hash: 4ac308e7af27730c8550bc0154ef6c9a795e4c748dfd09ce86523df23984c59a
+File: windows_py38_ecp_results.txt, Hash: 26963808c516219bbd255abf322159c8a700a1d5ef4c4ad003d964f2bdc0cc96
+
+--- Difference at line 60 ---
+Object: [{'x': (1, 2)}, {5, 6}, bytearray(b'data')], Protocol: 1
+File: windows_py311_ecp_results.txt, Hash: aaf3074c2f462f1a32255e0491e78f7f4e60792093b4539e36227dee5e8206e0
+File: windows_py312_ecp_results.txt, Hash: aaf3074c2f462f1a32255e0491e78f7f4e60792093b4539e36227dee5e8206e0
+File: windows_py36_ecp_results.txt, Hash: 565108261bb2dc9baca40142ae72208c11a72a39b7420688882d6cdafcc0aab6
+File: windows_py37_ecp_results.txt, Hash: 565108261bb2dc9baca40142ae72208c11a72a39b7420688882d6cdafcc0aab6
+File: windows_py38_ecp_results.txt, Hash: aaf3074c2f462f1a32255e0491e78f7f4e60792093b4539e36227dee5e8206e0
+
+--- Difference at line 67 ---
+Object: bytearray(b'abc'), Protocol: 2
+File: windows_py311_ecp_results.txt, Hash: 200577289a54dfd06e5a5e098db1f9a0d1505bcb7a622038815426355d43ebb3
+File: windows_py312_ecp_results.txt, Hash: 200577289a54dfd06e5a5e098db1f9a0d1505bcb7a622038815426355d43ebb3
+File: windows_py36_ecp_results.txt, Hash: 3dbf15dd30c320c74be954546f6b19d6f4fa55683631d64c355ecd77497a2e1f
+File: windows_py37_ecp_results.txt, Hash: 3dbf15dd30c320c74be954546f6b19d6f4fa55683631d64c355ecd77497a2e1f
+File: windows_py38_ecp_results.txt, Hash: 200577289a54dfd06e5a5e098db1f9a0d1505bcb7a622038815426355d43ebb3
+
+--- Difference at line 68 ---
+Object: [{'x': (1, 2)}, {5, 6}, bytearray(b'data')], Protocol: 2
+File: windows_py311_ecp_results.txt, Hash: eea784e3a643d23337d9ecd3737afa6229e92b7cb872c7435a01b744322a5567
+File: windows_py312_ecp_results.txt, Hash: eea784e3a643d23337d9ecd3737afa6229e92b7cb872c7435a01b744322a5567
+File: windows_py36_ecp_results.txt, Hash: 7ad1e21904b5d30d750e59e7599c71c7d3b52be13ae44f4af50f69f7c420088a
+File: windows_py37_ecp_results.txt, Hash: 7ad1e21904b5d30d750e59e7599c71c7d3b52be13ae44f4af50f69f7c420088a
+File: windows_py38_ecp_results.txt, Hash: eea784e3a643d23337d9ecd3737afa6229e92b7cb872c7435a01b744322a5567
+
+--- Difference at line 85 ---
+Object: <ecp_test.CustomClass object at 0x000001AE20D98650>, Protocol: -1
+File: windows_py311_ecp_results.txt, Hash: 180971cadff872b46f0d35bb2557e7d7b35f65a4a51d9b5ff3b93c9500e4f673
+File: windows_py312_ecp_results.txt, Hash: 180971cadff872b46f0d35bb2557e7d7b35f65a4a51d9b5ff3b93c9500e4f673
+File: windows_py36_ecp_results.txt, Hash: 8ab1233cd7872393054a7abaf793e8fefbc31fc6f0717e89db3bbb1bbafb2000
+File: windows_py37_ecp_results.txt, Hash: 8ab1233cd7872393054a7abaf793e8fefbc31fc6f0717e89db3bbb1bbafb2000
+File: windows_py38_ecp_results.txt, Hash: 180971cadff872b46f0d35bb2557e7d7b35f65a4a51d9b5ff3b93c9500e4f673
+
+--- Difference at line 86 ---
+Object: [<ecp_test.NestedClass object at 0x000001AE20D98610>, <ecp_test.NestedClass object at 0x000001AE20D98690>], Protocol: -1
+File: windows_py311_ecp_results.txt, Hash: 640a4fa81906b6ff35be4d2a597cc1fb3b7defa49596950e9938a22589cda881
+File: windows_py312_ecp_results.txt, Hash: 640a4fa81906b6ff35be4d2a597cc1fb3b7defa49596950e9938a22589cda881
+File: windows_py36_ecp_results.txt, Hash: bb3a0f5bd47ccf4bb3b4e27bf4c2052512c90b18ce37d5f4c9d18802ff1f6259
+File: windows_py37_ecp_results.txt, Hash: bb3a0f5bd47ccf4bb3b4e27bf4c2052512c90b18ce37d5f4c9d18802ff1f6259
+File: windows_py38_ecp_results.txt, Hash: 640a4fa81906b6ff35be4d2a597cc1fb3b7defa49596950e9938a22589cda881
+
+--- Difference at line 87 ---
+Object: <ecp_test.CyclicClass object at 0x000001AE20D986D0>, Protocol: -1
+File: windows_py311_ecp_results.txt, Hash: 5de2f2f39625700ea428b2853c2b4ca5cd0df83ac16a7df14c78d8ce6bba7a47
+File: windows_py312_ecp_results.txt, Hash: 5de2f2f39625700ea428b2853c2b4ca5cd0df83ac16a7df14c78d8ce6bba7a47
+File: windows_py36_ecp_results.txt, Hash: 25c494fd8fa576d3ce5ada5c1136366a7e5ea7f063df08856979b4229d4bc064
+File: windows_py37_ecp_results.txt, Hash: 25c494fd8fa576d3ce5ada5c1136366a7e5ea7f063df08856979b4229d4bc064
+File: windows_py38_ecp_results.txt, Hash: 5de2f2f39625700ea428b2853c2b4ca5cd0df83ac16a7df14c78d8ce6bba7a47
+
+--- Difference at line 88 ---
+Object: <ecp_test.SlotsClass object at 0x000001AE20D486D0>, Protocol: -1
+File: windows_py311_ecp_results.txt, Hash: 16a3662408d98bce64403e816b40df504a06417b06d775da2bad4163ffd3c6e7
+File: windows_py312_ecp_results.txt, Hash: 16a3662408d98bce64403e816b40df504a06417b06d775da2bad4163ffd3c6e7
+File: windows_py36_ecp_results.txt, Hash: 69e2c9f3cab7c528d54138eb9215a6567cfe47219bfb4eb35b86a72cda70ad7f
+File: windows_py37_ecp_results.txt, Hash: 69e2c9f3cab7c528d54138eb9215a6567cfe47219bfb4eb35b86a72cda70ad7f
+File: windows_py38_ecp_results.txt, Hash: 16a3662408d98bce64403e816b40df504a06417b06d775da2bad4163ffd3c6e7
+
+--- Difference at line 101 ---
+Object: \test\path, Protocol: -1
+File: windows_py311_ecp_results.txt, Hash: a4f13ded7a99d34c53d4e31b0287a6004c199a21662f871a35daed721ae78784
+File: windows_py312_ecp_results.txt, Hash: a4f13ded7a99d34c53d4e31b0287a6004c199a21662f871a35daed721ae78784
+File: windows_py36_ecp_results.txt, Hash: 2d486420cedab7f7236daeca4ba00dbc8b4216a8de4c9040b8f939d15e8fff0f
+File: windows_py37_ecp_results.txt, Hash: 2d486420cedab7f7236daeca4ba00dbc8b4216a8de4c9040b8f939d15e8fff0f
+File: windows_py38_ecp_results.txt, Hash: a4f13ded7a99d34c53d4e31b0287a6004c199a21662f871a35daed721ae78784
+
+--- Difference at line 102 ---
+Object: 2023-01-01 00:00:00, Protocol: -1
+File: windows_py311_ecp_results.txt, Hash: 6771ec554b06eb6df8240627a9a632f26f366373507a4cde70a5809928b20dc7
+File: windows_py312_ecp_results.txt, Hash: 6771ec554b06eb6df8240627a9a632f26f366373507a4cde70a5809928b20dc7
+File: windows_py36_ecp_results.txt, Hash: 5c876870d98233a75c76de7e2d8f0e82060ecb688c82e7502570b05dfa8cfc11
+File: windows_py37_ecp_results.txt, Hash: 5c876870d98233a75c76de7e2d8f0e82060ecb688c82e7502570b05dfa8cfc11
+File: windows_py38_ecp_results.txt, Hash: 6771ec554b06eb6df8240627a9a632f26f366373507a4cde70a5809928b20dc7
+
+--- Difference at line 103 ---
+Object: Color.RED, Protocol: -1
+File: windows_py311_ecp_results.txt, Hash: 2daf5c6c402d482d2d7c47484c931e4e0acc109adb206eababc9a2d729b0900b
+File: windows_py312_ecp_results.txt, Hash: 2daf5c6c402d482d2d7c47484c931e4e0acc109adb206eababc9a2d729b0900b
+File: windows_py36_ecp_results.txt, Hash: 6a9536c9f923ca47c603135c8479348244909aa8d62a7be94e29a156a2ce20c6
+File: windows_py37_ecp_results.txt, Hash: 6a9536c9f923ca47c603135c8479348244909aa8d62a7be94e29a156a2ce20c6
+File: windows_py38_ecp_results.txt, Hash: 2daf5c6c402d482d2d7c47484c931e4e0acc109adb206eababc9a2d729b0900b
+
+--- Difference at line 104 ---
+Object: {'self': {...}}, Protocol: -1
+File: windows_py311_ecp_results.txt, Hash: 8e4773e8d9510881f1cc3ec02186138cc807e5ba1eef330b4493ae33b366d124
+File: windows_py312_ecp_results.txt, Hash: 8e4773e8d9510881f1cc3ec02186138cc807e5ba1eef330b4493ae33b366d124
+File: windows_py36_ecp_results.txt, Hash: b8205b1671223d0f624004c0571b98b257b665b6b5523751c3e2ac978b2ead6d
+File: windows_py37_ecp_results.txt, Hash: b8205b1671223d0f624004c0571b98b257b665b6b5523751c3e2ac978b2ead6d
+File: windows_py38_ecp_results.txt, Hash: 8e4773e8d9510881f1cc3ec02186138cc807e5ba1eef330b4493ae33b366d124
+
+--- Difference at line 105 ---
+Object: nan, Protocol: -1
+File: windows_py311_ecp_results.txt, Hash: 9d51ddf5364920bd3e61ebdef1946ebfae7be8ef34371c87704a69f6e6b60660
+File: windows_py312_ecp_results.txt, Hash: 9d51ddf5364920bd3e61ebdef1946ebfae7be8ef34371c87704a69f6e6b60660
+File: windows_py36_ecp_results.txt, Hash: 3d9d4af6ee01677bd51d3efb4dca6c1339ae8b2a73102f65990a6cbd7625eba9
+File: windows_py37_ecp_results.txt, Hash: 3d9d4af6ee01677bd51d3efb4dca6c1339ae8b2a73102f65990a6cbd7625eba9
+File: windows_py38_ecp_results.txt, Hash: 9d51ddf5364920bd3e61ebdef1946ebfae7be8ef34371c87704a69f6e6b60660
+
+--- Difference at line 107 ---
+Object: 2023-01-01 00:00:00, Protocol: 0
+File: windows_py311_ecp_results.txt, Hash: c225ba3b1b3ae89f725212fdf37b2414e02a348fce893edbb9ccaa6c91697a80
+File: windows_py312_ecp_results.txt, Hash: c225ba3b1b3ae89f725212fdf37b2414e02a348fce893edbb9ccaa6c91697a80
+File: windows_py36_ecp_results.txt, Hash: 76e296f101f002070f121c6f07d3a7fae515d131133f6522cf5b90d51597e98f
+File: windows_py37_ecp_results.txt, Hash: c225ba3b1b3ae89f725212fdf37b2414e02a348fce893edbb9ccaa6c91697a80
+File: windows_py38_ecp_results.txt, Hash: c225ba3b1b3ae89f725212fdf37b2414e02a348fce893edbb9ccaa6c91697a80
+
+--- Difference at line 108 ---
+Object: Color.RED, Protocol: 0
+File: windows_py311_ecp_results.txt, Hash: 57c83b465ad7e9feb1721beb6690dc3dfebed097a5018537323ea2928bc8b9d6
+File: windows_py312_ecp_results.txt, Hash: 57c83b465ad7e9feb1721beb6690dc3dfebed097a5018537323ea2928bc8b9d6
+File: windows_py36_ecp_results.txt, Hash: e0aee4310c584420fdf4212a0191eb1b0ffdaf235137dca505480e5a7578ff09
+File: windows_py37_ecp_results.txt, Hash: 57c83b465ad7e9feb1721beb6690dc3dfebed097a5018537323ea2928bc8b9d6
+File: windows_py38_ecp_results.txt, Hash: 57c83b465ad7e9feb1721beb6690dc3dfebed097a5018537323ea2928bc8b9d6
+
