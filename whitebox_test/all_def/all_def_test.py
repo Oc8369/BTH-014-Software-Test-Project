@@ -5,67 +5,68 @@ import pytest
 import platform
 
 
-# save the hash result of current system / python
-def save_test_result(obj, protocol, hash):
+def save_test_result(obj, protocol, hash_value):
+    """Save the hash result of current system / Python version."""
     system = platform.system().lower()
     py_version = f"py{sys.version_info.major}{sys.version_info.minor}"
     filename = f"{system}_{py_version}_all_def_results.txt"
-    
-    with open(filename, "a") as f:
-        f.write(f"Object: {obj}, Protocol: {protocol}, Hash: {hash}\n")
-        
-@pytest.mark.parametrize("protocol", range(0, 6))        
-def test_protocol(protocol):
-    '''Verify the all-defs coverage of variable 'protocol' through different protocol versions'''
-    test_cases = [
-            (None,[None]) 
-        ]
-    for obj, _ in test_cases:
-        bytes_flow = pickle.dumps(obj, protocol = protocol)
-        assert isinstance(bytes_flow, bytes)
-        
-        hash = hashlib.sha256(bytes_flow).hexdigest()
-        save_test_result(obj, protocol, hash)
 
-@pytest.mark.parametrize("protocol", range(0, 6))      
+    with open(filename, "a") as f:
+        f.write(f"Object: {obj}, Protocol: {protocol}, Hash: {hash_value}\n")
+        
+@pytest.mark.parametrize("protocol", range(0, 6))
+def test_protocol(protocol):
+    """Verify the all-defs coverage of variable 'protocol' through different protocol versions."""
+    test_cases = [
+        (None, [None]),
+    ]
+    for obj, _ in test_cases:
+        bytes_flow = pickle.dumps(obj, protocol=protocol)
+        assert isinstance(bytes_flow, bytes)
+
+        hash_value = hashlib.sha256(bytes_flow).hexdigest()
+        save_test_result(obj, protocol, hash_value)
+
+@pytest.mark.parametrize("protocol", range(0, 6))
 def test_memo(protocol):
-    '''Verify the all-defs coverage of variable 'memo' by repeatedly referencing objects'''
+    """Verify the all-defs coverage of variable 'memo' by repeatedly referencing objects."""
     shared_list = [1, 2, 3]
     obj = [shared_list, shared_list]
-    
-    bytes_flow = pickle.dumps(obj, protocol = protocol)
-    assert isinstance(bytes_flow, bytes)
-    hash = hashlib.sha256(bytes_flow).hexdigest()
-    
-    save_test_result(obj, protocol, hash)
-    
-@pytest.mark.parametrize("protocol", [5])      
-def test_farmer(protocol):
-    '''Verify the all-defs coverage of variable 'framer' by a byte string exceeding _SRAME-SSIZE_TARGET'''
-    obj = b"x" * (100 * 1024)
-    
-    bytes_flow = pickle.dumps(obj, protocol = protocol)
-    assert isinstance(bytes_flow, bytes)
-    hash = hashlib.sha256(bytes_flow).hexdigest()
-    
-    save_test_result(obj, protocol, hash)
 
-@pytest.mark.parametrize("protocol", [5])   
-def test_buffer_callback(protocol):
-    '''Verify the all-defs coverage of variable '_buffer_callback' by Deserialization after serialization'''
-    obj = bytearray(b"Test buffer data for pickle")
-    
-    bytes_flow = pickle.dumps(obj, protocol = protocol)
+    bytes_flow = pickle.dumps(obj, protocol=protocol)
     assert isinstance(bytes_flow, bytes)
-    hash = hashlib.sha256(bytes_flow).hexdigest()
+
+    hash_value = hashlib.sha256(bytes_flow).hexdigest()
+
+    save_test_result(obj, protocol, hash_value)
     
-    save_test_result(obj, protocol, hash)
+@pytest.mark.parametrize("protocol", [5])
+def test_farmer(protocol):
+    """Verify the all-defs coverage of variable 'framer' by a byte string exceeding _SRAME-SSIZE_TARGET."""
+    obj = b"x" * (100 * 1024)
+
+    bytes_flow = pickle.dumps(obj, protocol=protocol)
+    assert isinstance(bytes_flow, bytes)
+    hash_value = hashlib.sha256(bytes_flow).hexdigest()
+
+    save_test_result(obj, protocol, hash_value)
+
+@pytest.mark.parametrize("protocol", [5])
+def test_buffer_callback(protocol):
+    """Verify the all-defs coverage of variable '_buffer_callback' by deserialization after serialization."""
+    obj = bytearray(b"Test buffer data for pickle")
+
+    bytes_flow = pickle.dumps(obj, protocol=protocol)
+    assert isinstance(bytes_flow, bytes)
+    hash_value = hashlib.sha256(bytes_flow).hexdigest()
+
+    save_test_result(obj, protocol, hash_value)
  
-@pytest.mark.parametrize("protocol", range(0, 6))     
+@pytest.mark.parametrize("protocol", range(0, 6))
 def test_dispatch(protocol):
-    '''Verify the all-defs coverage of variable 'dispatch' by dump all data types in it'''
+    """Verify the all-defs coverage of variable 'dispatch' by dumping all data types in it."""
     test_cases = [
-        # basic type
+        # basic types
         None,
         True,
         False,
@@ -76,26 +77,27 @@ def test_dispatch(protocol):
         bytearray(b"bytearray"),
         "unicode",
         complex(1, 2),
-        
-        # container
+
+        # containers
         [1, 2, 3],
         (1, 2, 3),
         {"a": 1, "b": 2},
         set([1, 2, 3]),
         frozenset([4, 5, 6]),
-        
-        # special obj
+
+        # special objects
         range(10),
         slice(1, 10, 2),
         ...,
         NotImplemented,
-        
+
         # function and class
         object(),
     ]
     for obj in test_cases:
-        bytes_flow = pickle.dumps(obj, protocol = protocol)
+        bytes_flow = pickle.dumps(obj, protocol=protocol)
         assert isinstance(bytes_flow, bytes)
-        hash = hashlib.sha256(bytes_flow).hexdigest()
-    
-        save_test_result(obj, protocol, hash)
+        hash_value = hashlib.sha256(bytes_flow).hexdigest()
+
+        save_test_result(obj, protocol, hash_value)
+
