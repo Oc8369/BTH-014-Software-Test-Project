@@ -1,0 +1,5 @@
+
+=== Statistical results ===
+Effective comparison of data volume: 92496 
+Number of hash inconsistencies: 0 
+Inconsistency rate: 0.00%
