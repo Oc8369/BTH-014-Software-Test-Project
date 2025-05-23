@@ -63,7 +63,7 @@ class Color(enum.Enum):
 
 
 # tests
-@pytest.mark.parametrize("protocol", range(-1, 5))
+@pytest.mark.parametrize("protocol", range(0, 5))
 def test_primitive_types(protocol):
     """basic data type"""
     test_cases = [
@@ -83,7 +83,7 @@ def test_primitive_types(protocol):
         save_test_result(obj, protocol, hash)
 
 
-@pytest.mark.parametrize("protocol", range(-1, 5))
+@pytest.mark.parametrize("protocol", range(0, 5))
 def test_containers(protocol):
     """Container type testing"""
     containers = [
@@ -113,7 +113,7 @@ def create_cyclic_ref():
     return obj1
 
 
-@pytest.mark.parametrize("protocol", [-1, 2, 3, 4])
+@pytest.mark.parametrize("protocol", [1, 2, 3, 4])
 def test_custom_objects(protocol):
     """Custom Object Testing"""
     test_cases = [
@@ -131,7 +131,7 @@ def test_custom_objects(protocol):
         save_test_result(obj, protocol, hash)
 
 
-@pytest.mark.parametrize("protocol", range(-1, 5))
+@pytest.mark.parametrize("protocol", range(0, 5))
 def test_special_types(protocol):
     """Special data type testing"""
     test_cases = [

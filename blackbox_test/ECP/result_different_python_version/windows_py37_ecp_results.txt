@@ -1,9 +1,3 @@
-Object: 42, Protocol: -1, Hash: 81976fef9fe34f8f64469792f27360d11781b927280419c5f5514c0da0235b54
-Object: hello, Protocol: -1, Hash: 425c7a325bad320fe5ab4ba6cfb411d9b79168bc7a3e2f9b4428b88f876ba7f1
-Object: 3.14, Protocol: -1, Hash: 7a8161062076a8001170b2d5be1fcd933570f86733e7bd69fcaceeb46e495ea5
-Object: True, Protocol: -1, Hash: 112bda3b495d867b6a98c899fac7c25eb60ca4b6e6fe5ec7ab9299f93e8274bc
-Object: False, Protocol: -1, Hash: 24a5341c9a6e30357187cbeaebee0a02714ee3b3d6cead951a613e96ffb746dc
-Object: None, Protocol: -1, Hash: 9c298d589a2158eb513cb52191144518a2acab2cb0c04f1df14fca0f712fa4a1
 Object: 42, Protocol: 0, Hash: 420f441051addef03c2364f1a7dee7159ad9570c06e8ea563f32f8e4ad933bd3
 Object: hello, Protocol: 0, Hash: 75761a3fd215b4bf1cec8568d98fee98df2f4fc0105cd0e5df2b713e03940178
 Object: 3.14, Protocol: 0, Hash: 933fb1cb2c0608a77d5c52d89b7dbd76961ae13355d61c89c876664692da1067
@@ -34,14 +28,6 @@ Object: 3.14, Protocol: 4, Hash: 7a8161062076a8001170b2d5be1fcd933570f86733e7bd6
 Object: True, Protocol: 4, Hash: 112bda3b495d867b6a98c899fac7c25eb60ca4b6e6fe5ec7ab9299f93e8274bc
 Object: False, Protocol: 4, Hash: 24a5341c9a6e30357187cbeaebee0a02714ee3b3d6cead951a613e96ffb746dc
 Object: None, Protocol: 4, Hash: 9c298d589a2158eb513cb52191144518a2acab2cb0c04f1df14fca0f712fa4a1
-Object: [1, 2, 3], Protocol: -1, Hash: f9343d7d7ec5c3d8bcced056c438fc9f1d3819e9ca3d42418a40857050e10e20
-Object: (4, 5), Protocol: -1, Hash: 53ddfa858ba0c6763cc109708205d281d30485fd2870377a573e003044ed753f
-Object: {'b': 2, 'a': 1}, Protocol: -1, Hash: ae8622c40986e49d221286df26c06338a0d074dbe60d86b8f52cb52cf585cf1a
-Object: {1, 2, 3}, Protocol: -1, Hash: 844e80e1f1ffaba7019345c229a5b8599bdb348864e993f1cbdc2962ce8e23ce
-Object: frozenset({4, 5, 6}), Protocol: -1, Hash: cfb28e9ca7b122a6edeb791fceee98374223b7d339ba5a6cd4abdeb782d0670e
-Object: deque([1, 2, 3]), Protocol: -1, Hash: 6930df757bf11910af968e16e3c4224f47174726828f3ff957948640f631748b
-Object: bytearray(b'abc'), Protocol: -1, Hash: e244f43c1fd9cf89d56a4dfd0bbdb9e0bcedb0cbffc9af2514d575b4112d1e07
-Object: [{'x': (1, 2)}, {5, 6}, bytearray(b'data')], Protocol: -1, Hash: 724fdc8b80dd33cbe8301072be056c9100eccb4cae209e53bf6b9ac4466cc3e1
 Object: [1, 2, 3], Protocol: 0, Hash: c81eb1d305835fe1cb192e13689011d4d2e41d4f860ad7d3b495f95ea049ad66
 Object: (4, 5), Protocol: 0, Hash: 54d8ca3c57385d845280f839b01c6ef9bdac19b69034266aef20999a9705f6d8
 Object: {'b': 2, 'a': 1}, Protocol: 0, Hash: ae6369f5bd51de0892aab80a1d66da25d78cc5c47a238fc422bf41b840598d2d
@@ -82,27 +68,18 @@ Object: frozenset({4, 5, 6}), Protocol: 4, Hash: cfb28e9ca7b122a6edeb791fceee983
 Object: deque([1, 2, 3]), Protocol: 4, Hash: 6930df757bf11910af968e16e3c4224f47174726828f3ff957948640f631748b
 Object: bytearray(b'abc'), Protocol: 4, Hash: e244f43c1fd9cf89d56a4dfd0bbdb9e0bcedb0cbffc9af2514d575b4112d1e07
 Object: [{'x': (1, 2)}, {5, 6}, bytearray(b'data')], Protocol: 4, Hash: 724fdc8b80dd33cbe8301072be056c9100eccb4cae209e53bf6b9ac4466cc3e1
-Object: <ecp_test.CustomClass object at 0x00000231FD7D2B88>, Protocol: -1, Hash: 8ab1233cd7872393054a7abaf793e8fefbc31fc6f0717e89db3bbb1bbafb2000
-Object: [<ecp_test.NestedClass object at 0x00000231FD7D2D48>, <ecp_test.NestedClass object at 0x00000231FD7D2E08>], Protocol: -1, Hash: bb3a0f5bd47ccf4bb3b4e27bf4c2052512c90b18ce37d5f4c9d18802ff1f6259
-Object: <ecp_test.CyclicClass object at 0x00000231FD7D26C8>, Protocol: -1, Hash: 25c494fd8fa576d3ce5ada5c1136366a7e5ea7f063df08856979b4229d4bc064
-Object: <ecp_test.SlotsClass object at 0x00000231FD7D2988>, Protocol: -1, Hash: 69e2c9f3cab7c528d54138eb9215a6567cfe47219bfb4eb35b86a72cda70ad7f
-Object: <ecp_test.CustomClass object at 0x00000231FD7D6188>, Protocol: 2, Hash: 74cfc571f3959a3f0c25102ad4f9cb270ab4f146a689bdd3d044d3cd099c186a
-Object: [<ecp_test.NestedClass object at 0x00000231FD7D60C8>, <ecp_test.NestedClass object at 0x00000231FD7D6048>], Protocol: 2, Hash: 5f4214be9181b440c59883c339f865425b165f340e644e499ce12cc8cce38bc5
-Object: <ecp_test.CyclicClass object at 0x00000231FD7D6148>, Protocol: 2, Hash: d9da4dfd595ca3e550ea756c433e4292bb713fd4777b88182de6cd6537d91222
-Object: <ecp_test.SlotsClass object at 0x00000231FD7D61C8>, Protocol: 2, Hash: a96cc576886c76d7883f2a49634bbb8062e902ff67002598f0065d0c4079a238
-Object: <ecp_test.CustomClass object at 0x00000231FD7D6048>, Protocol: 3, Hash: 0eca2fd71d6114b4bed8ab474f2025ddfe19608f6d5628a2a276b32a1b3a29d5
-Object: [<ecp_test.NestedClass object at 0x00000231FD7D64C8>, <ecp_test.NestedClass object at 0x00000231FD7D6588>], Protocol: 3, Hash: a184966f667bd098649386ba743b7476d8db22264825158da694048443fb350c
-Object: <ecp_test.CyclicClass object at 0x00000231FD7D6308>, Protocol: 3, Hash: 083957b3630366842b89a6ff26d8d132866d9db51f941eb9fa703a5908f87529
-Object: <ecp_test.SlotsClass object at 0x00000231FD7D6288>, Protocol: 3, Hash: 63d77aa37d0dbf882fdd3bb832cfdd746c0ab744ab35a5876478d1b7abb6931e
-Object: <ecp_test.CustomClass object at 0x00000231FD7D6248>, Protocol: 4, Hash: 8ab1233cd7872393054a7abaf793e8fefbc31fc6f0717e89db3bbb1bbafb2000
-Object: [<ecp_test.NestedClass object at 0x00000231FD7D6808>, <ecp_test.NestedClass object at 0x00000231FD7D68C8>], Protocol: 4, Hash: bb3a0f5bd47ccf4bb3b4e27bf4c2052512c90b18ce37d5f4c9d18802ff1f6259
-Object: <ecp_test.CyclicClass object at 0x00000231FD7D6608>, Protocol: 4, Hash: 25c494fd8fa576d3ce5ada5c1136366a7e5ea7f063df08856979b4229d4bc064
-Object: <ecp_test.SlotsClass object at 0x00000231FD7D6088>, Protocol: 4, Hash: 69e2c9f3cab7c528d54138eb9215a6567cfe47219bfb4eb35b86a72cda70ad7f
-Object: \test\path, Protocol: -1, Hash: 2d486420cedab7f7236daeca4ba00dbc8b4216a8de4c9040b8f939d15e8fff0f
-Object: 2023-01-01 00:00:00, Protocol: -1, Hash: 5c876870d98233a75c76de7e2d8f0e82060ecb688c82e7502570b05dfa8cfc11
-Object: Color.RED, Protocol: -1, Hash: 6a9536c9f923ca47c603135c8479348244909aa8d62a7be94e29a156a2ce20c6
-Object: {'self': {...}}, Protocol: -1, Hash: b8205b1671223d0f624004c0571b98b257b665b6b5523751c3e2ac978b2ead6d
-Object: nan, Protocol: -1, Hash: 3d9d4af6ee01677bd51d3efb4dca6c1339ae8b2a73102f65990a6cbd7625eba9
+Object: <ecp_test.CustomClass object at 0x000001C43A3BD108>, Protocol: 2, Hash: 74cfc571f3959a3f0c25102ad4f9cb270ab4f146a689bdd3d044d3cd099c186a
+Object: [<ecp_test.NestedClass object at 0x000001C43A3BD408>, <ecp_test.NestedClass object at 0x000001C43A3BD4C8>], Protocol: 2, Hash: 5f4214be9181b440c59883c339f865425b165f340e644e499ce12cc8cce38bc5
+Object: <ecp_test.CyclicClass object at 0x000001C43A3BD288>, Protocol: 2, Hash: d9da4dfd595ca3e550ea756c433e4292bb713fd4777b88182de6cd6537d91222
+Object: <ecp_test.SlotsClass object at 0x000001C43A3BD248>, Protocol: 2, Hash: a96cc576886c76d7883f2a49634bbb8062e902ff67002598f0065d0c4079a238
+Object: <ecp_test.CustomClass object at 0x000001C43A3BD208>, Protocol: 3, Hash: 0eca2fd71d6114b4bed8ab474f2025ddfe19608f6d5628a2a276b32a1b3a29d5
+Object: [<ecp_test.NestedClass object at 0x000001C43A3BD748>, <ecp_test.NestedClass object at 0x000001C43A3BD808>], Protocol: 3, Hash: a184966f667bd098649386ba743b7476d8db22264825158da694048443fb350c
+Object: <ecp_test.CyclicClass object at 0x000001C43A3BD548>, Protocol: 3, Hash: 083957b3630366842b89a6ff26d8d132866d9db51f941eb9fa703a5908f87529
+Object: <ecp_test.SlotsClass object at 0x000001C43A3BD188>, Protocol: 3, Hash: 63d77aa37d0dbf882fdd3bb832cfdd746c0ab744ab35a5876478d1b7abb6931e
+Object: <ecp_test.CustomClass object at 0x000001C43A3BD588>, Protocol: 4, Hash: 8ab1233cd7872393054a7abaf793e8fefbc31fc6f0717e89db3bbb1bbafb2000
+Object: [<ecp_test.NestedClass object at 0x000001C43A3BDA88>, <ecp_test.NestedClass object at 0x000001C43A3BDB48>], Protocol: 4, Hash: bb3a0f5bd47ccf4bb3b4e27bf4c2052512c90b18ce37d5f4c9d18802ff1f6259
+Object: <ecp_test.CyclicClass object at 0x000001C43A3BD888>, Protocol: 4, Hash: 25c494fd8fa576d3ce5ada5c1136366a7e5ea7f063df08856979b4229d4bc064
+Object: <ecp_test.SlotsClass object at 0x000001C43A3BD5C8>, Protocol: 4, Hash: 69e2c9f3cab7c528d54138eb9215a6567cfe47219bfb4eb35b86a72cda70ad7f
 Object: \test\path, Protocol: 0, Hash: 16bea353edfce574c6eee547d323b9cf46b238eb0609565057d8e37a4ad212c7
 Object: 2023-01-01 00:00:00, Protocol: 0, Hash: c225ba3b1b3ae89f725212fdf37b2414e02a348fce893edbb9ccaa6c91697a80
 Object: Color.RED, Protocol: 0, Hash: 57c83b465ad7e9feb1721beb6690dc3dfebed097a5018537323ea2928bc8b9d6
