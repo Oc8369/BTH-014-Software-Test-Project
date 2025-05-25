@@ -4,6 +4,7 @@ import hashlib
 import platform
 import sys
 import tempfile
+from pathlib import Path
 from collections import defaultdict
 
 from hypothesis import strategies as st, settings
@@ -14,16 +15,34 @@ from hypothesis.stateful import (
 )
 
 def save_test_result(obj, protocol, hash_value):
-    """Save the hash result of the current system and Python version."""
+    """Save test results with object, protocol and hash information.
+    
+    Results are saved in different directories based on system and Python version.
+    """
     system = platform.system().lower()
     py_version = f"py{sys.version_info.major}{sys.version_info.minor}"
-    filename = f"{system}_{py_version}_state_machine_results.txt"
-
-    with open(filename, "a", encoding="utf-8") as f:
-        f.write(
-            f"Object: {repr(obj)}, Protocol: {protocol}, "
-            f"Hash: {hash_value}\n"
-        )
+    
+    base_dir = Path(__file__).parent
+    save_paths = []
+    
+    # Determine save paths based on system and Python version
+    if system != "windows":
+        save_paths.append(base_dir / "result_different_system_version")
+    else:
+        if py_version != "py312":
+            save_paths.append(base_dir / "result_different_python_version")
+        else:
+            save_paths.append(base_dir / "result_different_system_version")
+            save_paths.append(base_dir / "result_different_python_version")
+            
+    # Save results to all applicable paths
+    for path in save_paths:
+        path.mkdir(exist_ok=True)
+        filename = path / f"{system}_{py_version}_state_machine_results.txt"
+        with open(filename, "a", encoding="utf-8") as result_file:
+            result_file.write(
+                f"Object: {obj}, Protocol: {protocol}, Hash: {hash_value}\n"
+            )
 
 def obj_hash(obj=None, protocol=pickle.HIGHEST_PROTOCOL, b=None):
     """Compute a SHA-256 hash for the given object or byte stream."""

@@ -1,25 +1,45 @@
-import platform
-import random
 import hashlib
 import pickle
-from datetime import datetime
-import sys
+import platform
+import random
 import string
+import sys
+from datetime import datetime
+from pathlib import Path
 
 
 random.seed(123456)
 
 
 def save_test_result(obj, protocol, hash_value):
-    """Custom storage test result method"""
+    """Save test results with object, protocol and hash information.
+    
+    Results are saved in different directories based on system and Python version.
+    """
     system = platform.system().lower()
     py_version = f"py{sys.version_info.major}{sys.version_info.minor}"
-    filename = f"{system}_{py_version}_fuzzing_results.txt"
-
-    with open(filename, "a", encoding="utf-8") as f:
-        f.write(
-            f"Object: {obj!r}, Protocol: {protocol}, Hash: {hash_value}\n"
-        )
+    
+    base_dir = Path(__file__).parent
+    save_paths = []
+    
+    # Determine save paths based on system and Python version
+    if system != "windows":
+        save_paths.append(base_dir / "result_different_system_version")
+    else:
+        if py_version != "py312":
+            save_paths.append(base_dir / "result_different_python_version")
+        else:
+            save_paths.append(base_dir / "result_different_system_version")
+            save_paths.append(base_dir / "result_different_python_version")
+            
+    # Save results to all applicable paths
+    for path in save_paths:
+        path.mkdir(exist_ok=True)
+        filename = path / f"{system}_{py_version}_fuzzing_results.txt"
+        with open(filename, "a", encoding="utf-8") as result_file:
+            result_file.write(
+                f"Object: {obj}, Protocol: {protocol}, Hash: {hash_value}\n"
+            )
 
 
 def random_data(depth=0):
@@ -153,6 +173,3 @@ def test_fuzzing(num=100000):
 
         hash_value = hashlib.sha256(bytes_flow).hexdigest()
         save_test_result(data, protocol, hash_value)
-
-
-# python -m pytest fuzzing_test.py -v

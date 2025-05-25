@@ -3,6 +3,7 @@ import hashlib
 import math
 import platform
 import pytest
+from pathlib import Path
 from datetime import datetime
 
 # Ensure that the C implementation of pickle is not used,
@@ -12,13 +13,34 @@ sys.modules["_pickle"] = None
 import my_pickle as pickle
 
 def save_test_result(obj, protocol, hash_value):
-    """Save the hash result of current system / Python version."""
+    """Save test results with object, protocol and hash information.
+    
+    Results are saved in different directories based on system and Python version.
+    """
     system = platform.system().lower()
     py_version = f"py{sys.version_info.major}{sys.version_info.minor}"
-    filename = f"{system}_{py_version}_coverage_results.txt"
-
-    with open(filename, "a") as f:
-        f.write(f"Object: {obj}, Protocol: {protocol}, Hash: {hash_value}\n")
+    
+    base_dir = Path(__file__).parent
+    save_paths = []
+    
+    # Determine save paths based on system and Python version
+    if system != "windows":
+        save_paths.append(base_dir / "result_different_system_version")
+    else:
+        if py_version != "py312":
+            save_paths.append(base_dir / "result_different_python_version")
+        else:
+            save_paths.append(base_dir / "result_different_system_version")
+            save_paths.append(base_dir / "result_different_python_version")
+            
+    # Save results to all applicable paths
+    for path in save_paths:
+        path.mkdir(exist_ok=True)
+        filename = path / f"{system}_{py_version}_coverage_results.txt"
+        with open(filename, "a", encoding="utf-8") as result_file:
+            result_file.write(
+                f"Object: {obj}, Protocol: {protocol}, Hash: {hash_value}\n"
+            )
 
 # Test of basic types. The latter half of each test case is its opcode
 @pytest.mark.parametrize("protocol", range(-1, 6))
@@ -333,5 +355,3 @@ def test_save_type(protocol):
             pickle.dump(obj, f, protocol=protocol)
 
         save_test_result(obj, protocol, hash_value)
-   
-    

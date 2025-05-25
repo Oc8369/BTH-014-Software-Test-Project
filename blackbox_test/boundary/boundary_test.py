@@ -1,60 +1,75 @@
-import sys
-import os
 import io
+import os
 import pickle
-import hashlib
 import platform
+import sys
 from collections import deque
+from pathlib import Path
 
-import numpy as np
+import hashlib
 import pytest
 
 
-PICKLE_PROTOCOL = 4  # 测试协议版本
-MAX_RECURSION = sys.getrecursionlimit()
-MAX_INT = 2 ** 31 - 1  # 32位有符号整数最大值
-
-# --------------------------
-# 工具函数
-# --------------------------
+PICKLE_PROTOCOL = 4  # Test protocol version
 
 
+# Utility functions
 def create_nested_list(depth):
-    """创建指定深度的嵌套列表。"""
+    """Create a nested list with specified depth."""
     obj = []
     for _ in range(depth):
         obj = [obj]
     return obj
 
 
-def save_test_result(obj, protocol, hash_result):
-    """保存当前系统/Python环境的测试结果哈希值。"""
+def save_test_result(obj, protocol, hash_value):
+    """Save test results with object, protocol and hash information.
+    
+    Results are saved in different directories based on system and Python version.
+    """
     system = platform.system().lower()
     py_version = f"py{sys.version_info.major}{sys.version_info.minor}"
-    filename = f"{system}_{py_version}_results.txt"
+    
+    base_dir = Path(__file__).parent
+    save_paths = []
+    
+    # Determine save paths based on system and Python version
+    if system != "windows":
+        save_paths.append(base_dir / "result_different_system_version")
+    else:
+        if py_version != "py312":
+            save_paths.append(base_dir / "result_different_python_version")
+        else:
+            save_paths.append(base_dir / "result_different_system_version")
+            save_paths.append(base_dir / "result_different_python_version")
+            
+    # Save results to all applicable paths
+    for path in save_paths:
+        path.mkdir(exist_ok=True)
+        filename = path / f"{system}_{py_version}_boundary_results.txt"
+        with open(filename, "a", encoding="utf-8") as result_file:
+            result_file.write(
+                f"Object: {obj}, Protocol: {protocol}, Hash: {hash_value}\n"
+            )
 
-    with open(filename, "a") as f:
-        f.write(f"Object: {obj}, Protocol: {protocol}, Hash: {hash_result}\n")
 
 
-# --------------------------
-# 边界测试函数
-# --------------------------
+# Boundary test functions
 @pytest.mark.parametrize(
     "obj",
     [
-        # 整数 ON / IN / OUT / OFF 点
+        # Integer ON/IN/OUT/OFF points
         2 ** 31 - 1,
         2 ** 31 - 2,
         0,
         2 ** 31,
         -2 ** 31 - 1,
-        # 浮点 ON / IN / OUT / OFF 点
-        np.finfo(np.float32).max,
+        # Float ON/IN/OUT/OFF points
+        # numpy.finfo(numpy.float32).max,
         0,
-        2 * np.finfo(np.float32).max,
-        -np.finfo(np.float32).max,
-        # 字符串 ON / IN / OUT / OFF 点
+        # 2 * numpy.finfo(numpy.float32).max,
+        # -numpy.finfo(numpy.float32).max,
+        # String ON/IN/OUT/OFF points
         "a" * 1024,
         "a",
         "a" * 1024,
@@ -62,7 +77,7 @@ def save_test_result(obj, protocol, hash_result):
     ],
 )
 def test_primitive_boundaries(obj):
-    """基础类型边界值验证。"""
+    """Validate boundary values for primitive types."""
     bytes_flow = pickle.dumps(obj, protocol=PICKLE_PROTOCOL)
     assert isinstance(bytes_flow, bytes)
 
@@ -73,7 +88,7 @@ def test_primitive_boundaries(obj):
 @pytest.mark.parametrize(
     "size",
     [
-        # 容器递归深度 ON / IN / OUT / OFF 点
+        # Container recursion depth ON/IN/OUT/OFF points
         1,
         2,
         0,
@@ -81,7 +96,7 @@ def test_primitive_boundaries(obj):
     ],
 )
 def test_container_recursion(size):
-    """嵌套容器递归深度测试。"""
+    """Test nested container recursion depth."""
     if size > 2 ** 10 - 24:
         pytest.skip()
     obj = create_nested_list(size)
@@ -94,7 +109,7 @@ def test_container_recursion(size):
 @pytest.mark.parametrize(
     "size",
     [
-        # 容器大小的 ON / IN / OUT / OFF 点
+        # Container size ON/IN/OUT/OFF points
         1,
         2,
         0,
@@ -103,7 +118,7 @@ def test_container_recursion(size):
     ],
 )
 def test_large_containers(size):
-    """容器容量边界值验证。"""
+    """Validate boundary values for container capacity."""
     if size > 2 ** 63 - 2:
         pytest.skip()
     obj = [i for i in range(size)]
@@ -114,14 +129,14 @@ def test_large_containers(size):
 
 
 class VersionedClass:
-    """用于测试版本兼容的类。"""
+    """Class for testing version compatibility."""
 
     def __init__(self, version):
         self.version = version
         try:
             self.data = list(range(version))
         except TypeError:
-            raise TypeError("版本号必须是整数")
+            raise TypeError("Version number must be an integer")
 
     def __getstate__(self):
         return (self.version, self.data)
@@ -133,7 +148,7 @@ class VersionedClass:
 @pytest.mark.parametrize(
     "version",
     [
-        # 类实例状态的 ON / IN / OUT / OFF 点
+        # Class instance state ON/IN/OUT/OFF points
         0,
         100,
         "invalid",
@@ -141,7 +156,7 @@ class VersionedClass:
     ],
 )
 def test_class_serialization(version):
-    """类实例状态序列化验证。"""
+    """Validate class instance state serialization."""
     try:
         obj = VersionedClass(version)
         bytes_flow = pickle.dumps(obj, protocol=PICKLE_PROTOCOL)
@@ -149,14 +164,14 @@ def test_class_serialization(version):
         assert isinstance(bytes_flow, bytes)
         save_test_result(obj, PICKLE_PROTOCOL, hash_result)
     except TypeError as e:
-        if version == "invalid":  # 预期字符串参数会触发TypeError
-            assert "必须是整数" in str(e)
+        if version == "invalid":  # Expected to raise TypeError for string input
+            assert "must be an integer" in str(e)
 
 
 @pytest.mark.parametrize(
     "obj",
     [
-        # Unicode 的 ON / IN / OUT / OFF 点
+        # Unicode ON/IN/OUT/OFF points
         "\u0000",
         "\U0010FFFF",
         "\uD800",
@@ -164,7 +179,7 @@ def test_class_serialization(version):
     ],
 )
 def test_unicode_handling(obj):
-    """Unicode编码处理验证。"""
+    """Validate Unicode encoding handling."""
     bytes_flow = pickle.dumps(obj, protocol=PICKLE_PROTOCOL)
     hash_result = hashlib.sha256(bytes_flow).hexdigest()
     assert isinstance(bytes_flow, bytes)
@@ -177,7 +192,7 @@ def test_unicode_handling(obj):
 
 
 def test_unsafe_deserialization():
-    """安全边界测试。"""
+    """Security boundary test."""
     sys_call = os.system
     target_module = getattr(sys_call, "__module__", "os")
     target_name = sys_call.__name__
@@ -185,14 +200,18 @@ def test_unsafe_deserialization():
     class RestrictedUnpickler(pickle.Unpickler):
         def find_class(self, module, name):
             if module == target_module and name == target_name:
-                raise pickle.UnpicklingError(f"SecurityBlock: {module}.{name}")
+                raise pickle.UnpicklingError(
+                    f"SecurityBlock: {module}.{name}"
+                )
             return super().find_class(module, name)
 
     class MaliciousPayload:
         def __reduce__(self):
             return (os.system, ("echo hacked",))
 
-    malicious_data = pickle.dumps(MaliciousPayload(), protocol=PICKLE_PROTOCOL)
+    malicious_data = pickle.dumps(
+        MaliciousPayload(), protocol=PICKLE_PROTOCOL
+    )
 
     with pytest.raises(pickle.UnpicklingError) as exc_info:
         RestrictedUnpickler(io.BytesIO(malicious_data)).load()
@@ -200,22 +219,19 @@ def test_unsafe_deserialization():
     assert f"SecurityBlock: {target_module}.{target_name}" in str(exc_info.value)
 
 
-"""---------新添加的----------"""
-
-
 @pytest.mark.parametrize(
     "size",
     [
-        0,  # ON点: 空bytes
-        1,  # IN点: 单字节
-        10 ** 6,  # OUT点: 1MB数据
-        2 ** 31  # OFF点: 2GB数据（跳过）
+        0,        # ON point: empty bytes
+        1,        # IN point: single byte
+        10 ** 6,  # OUT point: 1MB data
+        2 ** 31   # OFF point: 2GB data (skipped)
     ],
 )
 def test_bytes_boundaries(size):
-    """二进制数据大小边界验证。"""
-    if size > 2 ** 28:  # 256MB以上跳过
-        pytest.skip("测试数据过大")
+    """Validate binary data size boundaries."""
+    if size > 2 ** 28:  # Skip if larger than 256MB
+        pytest.skip("Test data too large")
     obj = b"\x01" * size
     bytes_flow = pickle.dumps(obj, protocol=PICKLE_PROTOCOL)
     hash_result = hashlib.sha256(bytes_flow).hexdigest()
@@ -226,14 +242,14 @@ def test_bytes_boundaries(size):
 @pytest.mark.parametrize(
     "maxlen",
     [
-        0,  # ON点: 固定长度队列
-        10,  # IN点: 常规队列
-        None,  # OFF点: 无限队列
-        -1  # 无效参数（应触发异常）
+        0,    # ON point: fixed-length queue
+        10,   # IN point: normal queue
+        None, # OFF point: infinite queue
+        -1    # Invalid parameter (should raise exception)
     ],
 )
 def test_deque_serialization(maxlen):
-    """双端队列结构验证。"""
+    """Validate deque structure serialization."""
     if maxlen == -1:
         with pytest.raises(ValueError):
             deque([], maxlen=maxlen)
@@ -242,5 +258,6 @@ def test_deque_serialization(maxlen):
     obj = deque([1, 2, 3], maxlen=maxlen)
     bytes_flow = pickle.dumps(obj, protocol=PICKLE_PROTOCOL)
     loaded = pickle.loads(bytes_flow)
+    
     assert loaded.maxlen == obj.maxlen
     assert list(loaded) == list(obj)

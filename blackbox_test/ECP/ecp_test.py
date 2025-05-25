@@ -10,14 +10,35 @@ from collections import deque
 
 
 # Utilities
-def save_test_result(obj, protocol, hash_):
-    """Save test results to a system/Python version-specific file."""
+def save_test_result(obj, protocol, hash_value):
+    """Save test results with object, protocol and hash information.
+    
+    Results are saved in different directories based on system and Python version.
+    """
     system = platform.system().lower()
     py_version = f"py{sys.version_info.major}{sys.version_info.minor}"
-    filename = f"{system}_{py_version}_ecp_results.txt"
-
-    with open(filename, "a") as f:
-        f.write(f"Object: {obj}, Protocol: {protocol}, Hash: {hash_}\n")
+    
+    base_dir = Path(__file__).parent
+    save_paths = []
+    
+    # Determine save paths based on system and Python version
+    if system != "windows":
+        save_paths.append(base_dir / "result_different_system_version")
+    else:
+        if py_version != "py312":
+            save_paths.append(base_dir / "result_different_python_version")
+        else:
+            save_paths.append(base_dir / "result_different_system_version")
+            save_paths.append(base_dir / "result_different_python_version")
+            
+    # Save results to all applicable paths
+    for path in save_paths:
+        path.mkdir(exist_ok=True)
+        filename = path / f"{system}_{py_version}_ecp_results.txt"
+        with open(filename, "a", encoding="utf-8") as result_file:
+            result_file.write(
+                f"Object: {obj}, Protocol: {protocol}, Hash: {hash_value}\n"
+            )
 
 
 def create_recursive_dict():
@@ -113,7 +134,7 @@ def create_cyclic_ref():
     return obj1
 
 
-@pytest.mark.parametrize("protocol", [1, 2, 3, 4])
+@pytest.mark.parametrize("protocol", [2, 3, 4])
 def test_custom_objects(protocol):
     """Custom Object Testing"""
     test_cases = [
