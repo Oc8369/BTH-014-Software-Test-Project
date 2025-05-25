@@ -1,4 +1,10 @@
-# BTH-014-Software-Test-Project (modified Chinese)
+# BTH-014-Software-Test-Project (简体中文)
+
+<div align="center">
+
+**简体中文** | [English](./README_EN.md)
+
+</div>
 
 ## 项目介绍
 
