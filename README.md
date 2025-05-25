@@ -1,4 +1,4 @@
-# BTH-014-Software-Test-Project (简体中文)
+# BTH-014-Software-Test-Project
 
 <div align="center">
 
