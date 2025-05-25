@@ -1,4 +1,4 @@
-# BTH-014 Software_test_project
+# BTH-014-Software-Test-Project (modified Chinese)
 
 ## 项目介绍
 
