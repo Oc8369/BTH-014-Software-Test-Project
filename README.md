@@ -8,7 +8,7 @@
 
 ## Project Overview
 
-This project tests the stability of the `pickle` module's serialization functionality in the Python standard library. The goal is to study how different test environments affect the hash value of the serialized output for the same input. The environments are divided into two categories:
+This project tests the stability of the `pickle` module's serialization functionality in the Python standard library. The goal is to study how different test environments affect the hash value of the `dump/ dumps` output for the same input. The environments are divided into two categories:
 
 1. **Different operating systems** under **Python 3.12** ( **Windows** ,  **Linux** , and  **macOS** )
 2. **Different Python versions** under **Windows** (Python  **3.6** ,  **3.7** ,  **3.8** ,  **3.11** ,  **3.12** )
