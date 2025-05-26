@@ -6,7 +6,7 @@
 
 </div>
 
-## Project Overview
+## Project Introduction
 
 This project tests the stability of the `pickle` module's serialization functionality in the Python standard library. The goal is to study how different test environments affect the hash value of the `dump/ dumps` output for the same input. The environments are divided into two categories:
 
@@ -100,7 +100,7 @@ On Windows:
 ./Windows_test.bat
 ```
 
-Or on Linux/macOS:
+Or (on Linux/macOS):
 
 ```
 chmod +x Linux_macOS_test.sh
