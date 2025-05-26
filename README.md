@@ -92,7 +92,7 @@ After comparing hash values line by line, any discrepancies will be stored in th
 
 ### Run the Test
 
-If you want to run the test scripts on your own OS and Python version to generate additional comparison files:
+If you want to run the test codes on your own OS and Python version to generate additional comparison files:
 
 On Windows:
 
@@ -107,7 +107,7 @@ chmod +x Linux_macOS_test.sh
 ./Linux_macOS_test.sh
 ```
 
-All test scripts will be executed. (**fuzzing_test.py** generates **100,000 test cases** and takes around **30 seconds** to run)
+All test codes will be executed. (**fuzzing_test.py** generates **100,000 test cases** and takes around **30 seconds** to run)
 
 Test results are named as `SystemName_PythonVersion_TestName_result.txt` and saved in:
 
