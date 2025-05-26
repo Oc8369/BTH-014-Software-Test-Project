@@ -152,8 +152,8 @@ def random_string():
     """Generate strings containing multilingual characters and special symbols"""
     char_pool = (
         string.printable
-        + ''.join(chr(i) for i in range(0x4E00, 0x4E50))  # 中文
-        + ''.join(chr(i) for i in range(0x0400, 0x04FF))  # 西里尔字母
+        + ''.join(chr(i) for i in range(0x4E00, 0x4E50))  # Chinese
+        + ''.join(chr(i) for i in range(0x0400, 0x04FF))  # Cyrillic Alphabet
         + ''.join(chr(i) for i in range(0x1F600, 0x1F64F))  # Emoji
     )
     return ''.join(
