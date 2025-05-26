@@ -22,40 +22,40 @@ For different Python versions, we use **conda** for dynamic environment manageme
 ```
 Software_test
 ├── blackbox_test
-│   ├── boundary // Boundary testing
-│   │   ├── result_different_python_vision // Results for different Python versions
-│   │   ├── result_different_system_vision // Results for different systems
-│   │   └── boundary_test.py // Generates test data, runs tests, and logs results
-│   ├── ecp // Equivalence Class Partitioning
+│   ├── boundary # Boundary testing
+│   │   ├── result_different_python_vision # Results for different Python versions
+│   │   ├── result_different_system_vision # Results for different systems
+│   │   └── boundary_test.py # Generates test data, runs tests, and logs results
+│   ├── ecp # Equivalence Class Partitioning
 │   │   ├── result_different_python_version
 │   │   ├── result_different_system_version
 │   │   └── ecp_test.py
-│   ├── fuzzing
+│   ├── fuzzing # Fuzzing testing
 │   │   ├── result_different_python_version
 │   │   ├── result_different_system_version
 │   │   └── fuzzing_test.py
-│   └── state_machine
+│   └── state_machine # State Machine
 │       ├── result_different_python_version
 │       ├── result_different_system_version
 │       └── state_machine_test.py
 ├── whitebox_test
-│   ├── all_defs // All-defs coverage
+│   ├── all_defs # All-defs coverage
 │   │   ├── result_different_python_version
 │   │   ├── result_different_system_version
 │   │   └── all_defs_test.py
-│   └── statement_coverage_and_branch_coverage
+│   └── statement_coverage_and_branch_coverage 
 │       ├── result_different_python_version
 │       ├── result_different_system_version
 │       ├── coverage_test.py
-│       └── my_pickle.py // A copy of the pickle module for coverage analysis
-├── tools // Utility tools
-│       ├── analysis.py // Compares hash values of test results
-│       └── clean_redundant_files.py // Cleans up redundant test files
-├── analysis_res // Stores analysis results
-├── Windows_test.bat // One-click test execution on Windows
-├── Windows_analysis.bat // One-click hash analysis on Windows
-├── Linux_macOS_test.sh // One-click test execution on Linux/macOS
-└── Linux_macOS_analysis.sh // One-click hash analysis on Linux/macOS
+│       └── my_pickle.py # A copy of the pickle module for coverage analysis
+├── tools # Utility tools
+│       ├── analysis.py # Compares hash values of test results
+│       └── clean_redundant_files.py # Cleans up redundant test files
+├── analysis_res # Stores analysis results
+├── Windows_test.bat # One-click test execution on Windows
+├── Windows_analysis.bat # One-click hash analysis on Windows
+├── Linux_macOS_test.sh # One-click test execution on Linux/macOS
+└── Linux_macOS_analysis.sh # One-click hash analysis on Linux/macOS
 ```
 
 # Running the Project
@@ -79,7 +79,7 @@ To run the analysis script from the project root (on Windows):
 ./Windows_analysis.bat
 ```
 
-Or on Linux/macOS:
+Or (on Linux/macOS):
 
 ```
 chmod +x Linux_macOS_analysis.sh

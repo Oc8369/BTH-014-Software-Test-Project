@@ -22,41 +22,41 @@
 ```
 Software_test
 ├── blackbox_test
-│   ├── boundary //边界测试
-│   │   ├── result_different_python_vision //记录边界测试不同python版本的测试结果
-│   │   ├── result_different_system_vision //记录边界测试不同系统的测试结果
-│   │   └── boundary_test.py //生成测试数据，进行测试并记录
-│   ├── ecp //等价类划分
-│   │   ├── result_different_python_version //记录等价类划分不同python版本的测试结果
-│   │   ├── result_different_system_version //记录等价类划分不同系统的测试结果
-│   │   └── ecp_test.py //生成测试数据，进行测试并记录
-│   ├── fuzzing //模糊测试
-│   │   ├── result_different_python_version //记录模糊测试不同python版本的测试结果
-│   │   ├── result_different_system_version //记录模糊测试不同系统的测试结果
-│   │   └── fuzzing_test.py //生成测试数据，进行测试并记录
-│   └── state_machine //状态机
-│       ├── result_different_python_version //记录状态机不同python版本的测试结果
-│       ├── result_different_system_version //记录状态机不同系统的测试结果
-│	└── state_machine_test.py //生成测试数据，进行测试并记录
+│   ├── boundary # 边界测试
+│   │   ├── result_different_python_vision # 记录边界测试不同python版本的测试结果
+│   │   ├── result_different_system_vision # 记录边界测试不同系统的测试结果
+│   │   └── boundary_test.py # 生成测试数据，进行测试并记录
+│   ├── ecp # 等价类划分
+│   │   ├── result_different_python_version
+│   │   ├── result_different_system_version
+│   │   └── ecp_test.py
+│   ├── fuzzing # 模糊测试
+│   │   ├── result_different_python_version
+│   │   ├── result_different_system_version
+│   │   └── fuzzing_test.py
+│   └── state_machine # 状态机
+│       ├── result_different_python_version 
+│       ├── result_different_system_version 
+│	└── state_machine_test.py
 ├── whitebox_test
-│   ├── all_defs //定义覆盖
-│   │   ├── result_different_python_version //记录定义覆盖不同python版本的测试结果
-│   │   ├── result_different_system_version //记录定义覆盖不同系统的测试结果
-│   │   └── all_defs_test.py //生成测试数据，进行测试并记录
+│   ├── all_defs # 定义覆盖
+│   │   ├── result_different_python_version 
+│   │   ├── result_different_system_version
+│   │   └── all_defs_test.py
 │   │   
-│   └── statement_coverage_and_branch_coverage //语句覆盖与分支覆盖
-│       ├── result_different_python_version //记录语句覆盖与分支覆盖不同python版本的测试结果
-│       ├── result_different_system_version //记录语句覆盖与分支覆盖不同系统的测试结果
-│	├── coverage_test.py //生成测试数据，进行测试并记录
-│	└── my_pickle.py //将pickle模块复制到目录下，便于计算覆盖率
-├── tools //测试使用的其他工具
-│       ├── analysis.py //用于比较测试结果哈希值的函数
-│       └── clean_redundant_files.py //用于清理测试产生的多余文件
-├── analysis_res //存储分析结果
-├── Windows_test.bat //Windows下一键执行测试
-├── Windows_analysis.bat //Windows下一键执行测试结果哈希值比较分析
-├── Linux_macOS_test.sh //Linux下一键执行测试
-└── Linux_macOS_analysis.sh //Linux下一键执行测试结果哈希值比较分析
+│   └── statement_coverage_and_branch_coverage # 语句覆盖和分支覆盖
+│       ├── result_different_python_version
+│       ├── result_different_system_version
+│	├── coverage_test.py
+│	└── my_pickle.py # 将pickle模块复制到目录下，便于计算覆盖率
+├── tools # 测试使用的其他工具
+│       ├── analysis.py # 用于比较测试结果哈希值的函数
+│       └── clean_redundant_files.py # 用于清理测试产生的多余文件
+├── analysis_res # 存储分析结果
+├── Windows_test.bat # Windows下一键执行测试
+├── Windows_analysis.bat # Windows下一键执行测试结果哈希值比较分析
+├── Linux_macOS_test.sh # Linux下一键执行测试
+└── Linux_macOS_analysis.sh # Linux下一键执行测试结果哈希值比较分析
 ```
 
 # 运行项目
@@ -65,8 +65,8 @@ Software_test
 
 我们已经在不同的系统（**Windows**、**Linux**和**macOS**）和不同的python版本（**3.6**、**3.7**、**3.8**、**3.11**、**3.12**）下运行过所有测试，测试结果存储在对应测试目录下的：
 
-* result_different_python_version
-* result_different_system_version
+* `result_different_python_version`
+* `result_different_system_version`
 
 以边界测试在Windows，Python3.6下的测试结果为例，如图所示：
 
@@ -87,7 +87,7 @@ chmod +x Linux_macOS_analysis.sh
 ./Linux_macOS_analysis.sh
 ```
 
-所有测试结果逐行比较哈希值后，哈希值不同的行将存储到根目录的 analysis_res 文件夹中，如图所示：
+所有测试结果逐行比较哈希值后，哈希值不同的行将存储到根目录的 `analysis_res` 文件夹中，如图所示：
 
 ![1748252012282](image/README/boundary_analysis_results.png)
 
@@ -112,8 +112,8 @@ chmod +x Linux_macOS_test.sh
 
 测试运行结果以 `系统名称_python版本_测试名称_result.txt` 命名，以测试文件中 `save_test_result`函数的逻辑分配到：
 
-* result_different_python_version
-* result_different_system_version
+* `result_different_python_version`
+* `result_different_system_version`
 
 以边界测试为例，我在Windows，Python3.10的环境下执行测试代码，测试结果被分配到 `result_different_python_version` 文件夹，如图所示：
 
