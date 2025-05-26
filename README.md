@@ -58,9 +58,9 @@ Software_test
 └── Linux_macOS_analysis.sh # One-click hash analysis on Linux/macOS
 ```
 
-# Running the Project
+## Running the Project
 
-## Quick Start
+### Quick Start
 
 All tests have been executed under various systems ( **Windows** ,  **Linux** , and  **macOS** ) and Python versions ( **3.6** ,  **3.7** ,  **3.8** ,  **3.11** ,  **3.12** ). The results are saved in:
 
@@ -90,7 +90,7 @@ After comparing hash values line by line, any discrepancies will be stored in th
 
 ![1748252012282](image/README/boundary_analysis_results.png)
 
-## Run the Test Scripts
+### Run the Test
 
 If you want to run the test scripts on your own OS and Python version to generate additional comparison files:
 
@@ -120,7 +120,7 @@ For example, when running the boundary test under Windows with Python 3.10, the 
 
 To compare results, refer to the **Quick Start** section above.
 
-## View Statement/Branch Coverage
+### View Statement/Branch Coverage
 
 Run the following in the project root:
 
