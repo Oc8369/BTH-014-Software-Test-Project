@@ -1,59 +1,130 @@
-# BTH-014-Software-Test-Project
+# BTH-014 Software Testing Project
 
 <div align="center">
 
-**简体中文** | [English](./README_EN.md)
+[简体中文](./README_CN.md) | **English**
 
 </div>
 
-## 项目介绍
+## Project Overview
 
-本项目对python标准库中 `pickle`模块序列化功能的稳定性进行了测试，测试环境可分为以下两组：
+This project tests the stability of the `pickle` module's serialization functionality in the Python standard library. The goal is to study how different test environments affect the hash value of the serialized output for the same input. The environments are divided into two categories:
 
-1. Python3.12下的不同系统（**Windows**、**Linux**和**macOS**）
-2. **Windows**系统下的不同Python版本（**3.6**、**3.7**、**3.8**、**3.11**、**3.12**）
+1. **Different operating systems** under **Python 3.12** ( **Windows** ,  **Linux** , and  **macOS** )
+2. **Different Python versions** under **Windows** (Python  **3.6** ,  **3.7** ,  **3.8** ,  **3.11** ,  **3.12** )
 
-对于不同系统，我们选择**迁移代码**进行测试，再将测试结果合并后进行比较。
+For different systems, we **migrate the code** and compare the merged test results.
 
-对于不同Python版本，我们使用**conda**进行动态管理。
+For different Python versions, we use **conda** for dynamic environment management.
 
-## 项目结构
+## Project Structure
 
 ```
 Software_test
 ├── blackbox_test
-│   ├── boundary //边界测试
-│   │   ├── result_different_python_vision //记录边界测试不同python版本的测试结果
-│   │   ├── result_different_system_vision //记录边界测试不同系统的测试结果
-│   │   └── boundary_test.py //生成测试数据，进行测试并记录
-│   ├── ECP //等价类划分
-│   │   ├── result_different_python_version //记录等价类划分不同python版本的测试结果
-│   │   ├── result_different_system_version //记录等价类划分不同系统的测试结果
-│   │   └── ecp_test.py //生成测试数据，进行测试并记录
-│   ├── fuzzing //模糊测试
-│   │   ├── result_different_python_version //记录模糊测试不同python版本的测试结果
-│   │   ├── result_different_system_version //记录模糊测试不同系统的测试结果
-│   │   └── fuzzing_test.py //生成测试数据，进行测试并记录
-│   └── state_machine //状态机
-│       ├── result_different_python_version //记录状态机不同python版本的测试结果
-│       ├── result_different_system_version //记录状态机不同系统的测试结果
-│	└── state_machine_test.py //生成测试数据，进行测试并记录
+│   ├── boundary // Boundary testing
+│   │   ├── result_different_python_vision // Results for different Python versions
+│   │   ├── result_different_system_vision // Results for different systems
+│   │   └── boundary_test.py // Generates test data, runs tests, and logs results
+│   ├── ecp // Equivalence Class Partitioning
+│   │   ├── result_different_python_version
+│   │   ├── result_different_system_version
+│   │   └── ecp_test.py
+│   ├── fuzzing
+│   │   ├── result_different_python_version
+│   │   ├── result_different_system_version
+│   │   └── fuzzing_test.py
+│   └── state_machine
+│       ├── result_different_python_version
+│       ├── result_different_system_version
+│       └── state_machine_test.py
 ├── whitebox_test
-│   ├── all_defs //定义覆盖
-│   │   ├── result_different_python_version //记录定义覆盖不同python版本的测试结果
-│   │   ├── result_different_system_version //记录定义覆盖不同系统的测试结果
-│   │   └── all_defs_test.py //生成测试数据，进行测试并记录
-│   │   
-│   └── statement_coverage_and_branch_coverage //语句覆盖与分支覆盖
-│       ├── result_different_python_version //记录语句覆盖与分支覆盖不同python版本的测试结果
-│       ├── result_different_system_version //记录语句覆盖与分支覆盖不同系统的测试结果
-│	├── coverage_test.py //生成测试数据，进行测试并记录
-│	└── my_pickle.py //将pickle模块复制到目录下，便于计算覆盖率
-├── analysis_res //存储分析结果
-├── analysis.py //用于比较测试结果哈希值的函数
-├── clean_redundant_files.py //用于清理测试产生的多余文件
-├── Linux_macOS_analysis.sh //Linux下一键执行测试结果哈希值比较
-├── Linux_macOS_test.sh //Linux下一键执行测试
-├── Windows_analysis.bat //Windows下一键执行测试结果哈希值比较
-├── Windows_test.bat //Windows下一键执行测试
+│   ├── all_defs // All-defs coverage
+│   │   ├── result_different_python_version
+│   │   ├── result_different_system_version
+│   │   └── all_defs_test.py
+│   └── statement_coverage_and_branch_coverage
+│       ├── result_different_python_version
+│       ├── result_different_system_version
+│       ├── coverage_test.py
+│       └── my_pickle.py // A copy of the pickle module for coverage analysis
+├── tools // Utility tools
+│       ├── analysis.py // Compares hash values of test results
+│       └── clean_redundant_files.py // Cleans up redundant test files
+├── analysis_res // Stores analysis results
+├── Windows_test.bat // One-click test execution on Windows
+├── Windows_analysis.bat // One-click hash analysis on Windows
+├── Linux_macOS_test.sh // One-click test execution on Linux/macOS
+└── Linux_macOS_analysis.sh // One-click hash analysis on Linux/macOS
+```
+
+# Running the Project
+
+## Quick Start
+
+All tests have been executed under various systems ( **Windows** ,  **Linux** , and  **macOS** ) and Python versions ( **3.6** ,  **3.7** ,  **3.8** ,  **3.11** ,  **3.12** ). The results are saved in:
+
+* `result_different_python_version`
+* `result_different_system_version`
+
+For example, boundary test results under Windows and Python 3.6 are shown below:
+
+![1748250051678](image/README/boundary_test_profile.png)
+
+Each row consists of three parts:  **Object** ,  **Protocol** , and  **Hash** , which correspond to the  **input** ,  **pickle protocol version** , and the **hash value** of the serialized output.
+
+To run the analysis script from the project root (on Windows):
+
+```
+./Windows_analysis.bat
+```
+
+Or on Linux/macOS:
+
+```
+chmod +x Linux_macOS_analysis.sh
+./Linux_macOS_analysis.sh
+```
+
+After comparing hash values line by line, any discrepancies will be stored in the `analysis_res` folder in the root directory, as shown below:
+
+![1748252012282](image/README/boundary_analysis_results.png)
+
+## Run the Test Scripts
+
+If you want to run the test scripts on your own OS and Python version to generate additional comparison files:
+
+On Windows:
+
+```
+./Windows_test.bat
+```
+
+Or on Linux/macOS:
+
+```
+chmod +x Linux_macOS_test.sh
+./Linux_macOS_test.sh
+```
+
+All test scripts will be executed. (**fuzzing_test.py** generates **100,000 test cases** and takes around **30 seconds** to run)
+
+Test results are named as `SystemName_PythonVersion_TestName_result.txt` and saved in:
+
+* `result_different_python_version`
+* `result_different_system_version`
+
+For example, when running the boundary test under Windows with Python 3.10, the results are saved in `result_different_python_version`, as shown:
+
+![1748251968128](image/README/boundary_test_results.png)
+
+To compare results, refer to the **Quick Start** section above.
+
+## View Statement/Branch Coverage
+
+Run the following in the project root:
+
+```
+coverage run --branch -m pytest whitebox_test\statement_coverage_and_branch_coverage\coverage_test.py -v
+coverage report -m
 ```
